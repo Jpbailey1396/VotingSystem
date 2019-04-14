@@ -21,6 +21,10 @@ public class BB {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //Setting the selection menu to true on startup -Josiah and Andrew 
+        new SelectMenu().setVisible(true);
+        
     }
     
 }
