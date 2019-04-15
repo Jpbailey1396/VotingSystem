@@ -48,6 +48,11 @@ public class SelectMenu extends javax.swing.JFrame {
         });
 
         vBtn.setText("Voter");
+        vBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +89,12 @@ public class SelectMenu extends javax.swing.JFrame {
     private void ecBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ecBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ecBtnActionPerformed
+
+    private void vBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vBtnActionPerformed
+        // TODO add your handling code here:
+        //Jframe for voting, set it visibile here
+        // Have stuff for the voting operation=
+    }//GEN-LAST:event_vBtnActionPerformed
 
     /**
      * @param args the command line arguments
