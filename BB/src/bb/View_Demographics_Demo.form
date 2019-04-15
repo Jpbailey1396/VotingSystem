@@ -37,8 +37,8 @@
                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="Election_Name_TextField" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jProgressBar1" alignment="0" pref="70" max="32767" attributes="0"/>
-                              <Component id="jProgressBar2" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="PBar_Male" alignment="0" pref="70" max="32767" attributes="0"/>
+                              <Component id="PBar_Female" alignment="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="77" max="32767" attributes="0"/>
@@ -102,11 +102,11 @@
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jProgressBar1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PBar_Male" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jProgressBar2" min="-2" max="-2" attributes="0"/>
+                      <Component id="PBar_Female" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -125,11 +125,11 @@
                               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -201,9 +201,9 @@
         <Property name="text" type="java.lang.String" value="Female"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+    <Component class="javax.swing.JProgressBar" name="PBar_Male">
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar2">
+    <Component class="javax.swing.JProgressBar" name="PBar_Female">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
