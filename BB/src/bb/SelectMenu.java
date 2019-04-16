@@ -91,9 +91,8 @@ public class SelectMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_ecBtnActionPerformed
 
     private void vBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vBtnActionPerformed
-        // TODO add your handling code here:
-        //Jframe for voting, set it visibile here
-        // Have stuff for the voting operation=
+        //by joseph
+        new voterClick().setVisible(true);
     }//GEN-LAST:event_vBtnActionPerformed
 
     /**
