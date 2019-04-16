@@ -64,6 +64,11 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
         jLabel3.setText("Reasoning");
 
         Backer.setText("Back");
+        Backer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackerActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Enter");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +136,11 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackerActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_BackerActionPerformed
 
     /**
      * @param args the command line arguments
