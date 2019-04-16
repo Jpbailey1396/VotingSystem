@@ -42,6 +42,11 @@ public class HSOfunc extends javax.swing.JFrame {
         });
 
         recountVoteBtn.setText("Recount Votes");
+        recountVoteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recountVoteBtnActionPerformed(evt);
+            }
+        });
 
         disqualifyVoteBtn.setText("Disqualify Votes");
         disqualifyVoteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +96,7 @@ public class HSOfunc extends javax.swing.JFrame {
 
     private void certifyElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_certifyElectionBtnActionPerformed
         // TODO add your handling code here:
+        new Certify_Election_Page().setVisible(true);
     }//GEN-LAST:event_certifyElectionBtnActionPerformed
 
     private void createElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createElectionBtnActionPerformed
@@ -102,6 +108,11 @@ public class HSOfunc extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Disqualify_Vote_Page().setVisible(true);
     }//GEN-LAST:event_disqualifyVoteBtnActionPerformed
+
+    private void recountVoteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recountVoteBtnActionPerformed
+        // TODO add your handling code here:
+        new Recount_Votes_Page().setVisible(true);
+    }//GEN-LAST:event_recountVoteBtnActionPerformed
 
     /**
      * @param args the command line arguments
