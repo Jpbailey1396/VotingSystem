@@ -11,13 +11,10 @@ package bb;
  */
 public class CreateModifyBallot extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CreateModifyBallot
-     */
     public CreateModifyBallot() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,21 +24,86 @@ public class CreateModifyBallot extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        CreateButton = new javax.swing.JButton();
+        ModifyButton = new javax.swing.JButton();
+        ExitButton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Create/Modify Ballot");
+
+        CreateButton.setText("Create Ballot");
+        CreateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateButtonActionPerformed(evt);
+            }
+        });
+
+        ModifyButton.setText("Modify Ballot");
+        ModifyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModifyButtonActionPerformed(evt);
+            }
+        });
+
+        ExitButton.setText("Exit");
+        ExitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CreateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ModifyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ExitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(CreateButton)
+                .addGap(50, 50, 50)
+                .addComponent(ModifyButton)
+                .addGap(62, 62, 62)
+                .addComponent(ExitButton)
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateButtonActionPerformed
+        //Change so it gives template option first
+        this.setVisible(false);
+        new CreateBallot().setVisible(true);
+    }//GEN-LAST:event_CreateButtonActionPerformed
+
+    private void ModifyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifyButtonActionPerformed
+        //change so it gives selection option first
+        this.setVisible(false);
+        new ModifyBallot().setVisible(true);
+    }//GEN-LAST:event_ModifyButtonActionPerformed
+
+    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
+        this.setVisible(false);     // TODO add your handling code here:
+        new SelectMenu().setVisible(true);
+    }//GEN-LAST:event_ExitButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +141,9 @@ public class CreateModifyBallot extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CreateButton;
+    private javax.swing.JButton ExitButton;
+    private javax.swing.JButton ModifyButton;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

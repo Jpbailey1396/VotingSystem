@@ -88,6 +88,7 @@ public class SelectMenu extends javax.swing.JFrame {
 
     private void ecBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ecBtnActionPerformed
         // TODO add your handling code here:
+        new CreateModifyBallot().setVisible(true);
     }//GEN-LAST:event_ecBtnActionPerformed
 
     private void vBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vBtnActionPerformed
