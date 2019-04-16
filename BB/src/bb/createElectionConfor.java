@@ -38,6 +38,11 @@ public class createElectionConfor extends javax.swing.JFrame {
         yesElectionBtn.setText("Yes");
 
         noElectionBtn.setText("No");
+        noElectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noElectionBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,6 +72,11 @@ public class createElectionConfor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void noElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noElectionBtnActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_noElectionBtnActionPerformed
 
     /**
      * @param args the command line arguments
