@@ -42,7 +42,12 @@ public class voterClickNext extends javax.swing.JFrame {
 
         jRadioButton1.setText("Homecoming");
 
-        jRadioButton2.setText("Favorite Advisor");
+        jRadioButton2.setText("Favorite Professor");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         jRadioButton3.setText("Favorite Advisor ");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +158,10 @@ public class voterClickNext extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
