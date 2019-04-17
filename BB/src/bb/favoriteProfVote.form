@@ -23,10 +23,18 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="117" max="-2" attributes="0"/>
-              <EmptySpace pref="258" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="117" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="150" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="154" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -35,7 +43,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="275" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="101" max="-2" attributes="0"/>
+              <EmptySpace pref="120" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,5 +56,42 @@
         <Property name="text" type="java.lang.String" value="Vote for your Favorite Advisor"/>
       </Properties>
     </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="jList1">
+          <Properties>
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+              <StringArray count="20">
+                <StringItem index="0" value="Cuthbert Binns"/>
+                <StringItem index="1" value=" Charity Burbage"/>
+                <StringItem index="2" value=" Alecto Carrow"/>
+                <StringItem index="3" value="Amycus Carrow"/>
+                <StringItem index="4" value="Albus Percival Wulfric Brian Dumbledore"/>
+                <StringItem index="5" value=" Filius Flitwick"/>
+                <StringItem index="6" value=" Firenze"/>
+                <StringItem index="7" value="Gilderoy Lockhart"/>
+                <StringItem index="8" value=" Neville Longbottom"/>
+                <StringItem index="9" value=" Remus Lupin"/>
+                <StringItem index="10" value="Minerva McGonagall"/>
+                <StringItem index="11" value="Alastor Moody"/>
+                <StringItem index="12" value="Quirinus Quirrell"/>
+                <StringItem index="13" value="Aurora Sinistra "/>
+                <StringItem index="14" value="Horace Slughorn"/>
+                <StringItem index="15" value=" Severus Snape"/>
+                <StringItem index="16" value=" Pomona Sprout"/>
+                <StringItem index="17" value=" Sybill Trelawney"/>
+                <StringItem index="18" value=" Dolores Jane Umbridge"/>
+                <StringItem index="19" value=" Septima Vector"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
