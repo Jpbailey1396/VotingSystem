@@ -1,5 +1,8 @@
 package bb;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -21,6 +24,18 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
     public String Students_ID(){
         String Id = ID.getText();
         return Id;
+    }
+    public boolean checkID(int id){
+        boolean check = false;
+        ArrayList<Integer> data = new ArrayList();
+        for(int i = 1; i<30; i++){
+            data.add(i);
+        }
+        for(int i = 1; i<data.size(); i++){
+            if(id == data.get(i)){
+                check=true;
+            }
+        } return check;
     }
 
     /**
@@ -56,7 +71,7 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Student_ID");
+        jLabel2.setText("User_ID");
 
         jRadioButton1.setText("Not qulified");
 
@@ -139,7 +154,13 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new Disqualify_Vote().setVisible(true);
+        if (checkID(Integer.parseInt(ID.getText()))){
+            new Disqualify_Vote(ID.getText()).setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(this, "ID does not exist!");
+        }
+        
+  
         
         
     }//GEN-LAST:event_jButton1ActionPerformed

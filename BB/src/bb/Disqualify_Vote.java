@@ -11,12 +11,16 @@ package bb;
  * @author acn00
  */
 public class Disqualify_Vote extends javax.swing.JFrame {
-
+    Disqualify_Vote_Page DvP;
     /**
      * Creates new form Disqualify_Vote
      */
     public Disqualify_Vote() {
         initComponents();
+    }
+    public Disqualify_Vote(String id) {
+        initComponents();
+        Student_ID.setText(id);
     }
     
 
@@ -52,6 +56,11 @@ public class Disqualify_Vote extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton1.setText("Yes");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Student");
@@ -112,6 +121,10 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_Student_IDActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
