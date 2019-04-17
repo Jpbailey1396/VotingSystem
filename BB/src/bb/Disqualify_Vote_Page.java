@@ -168,6 +168,7 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
     private void BackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackerActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        
     }//GEN-LAST:event_BackerActionPerformed
 
     /**
