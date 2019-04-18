@@ -5,9 +5,13 @@
  */
 package bb;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import javax.swing.Icon;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -20,9 +24,56 @@ public class CreateBallot extends javax.swing.JFrame {
      * Creates new form CreateBallot
      */
     DefaultTableModel model;
+    DefaultListModel liztModel;
+    private ArrayList Ballot=null;
+    private int currentRace;
     public CreateBallot() {
         initComponents();
         model=(DefaultTableModel)CanTable.getModel();
+        liztModel=new DefaultListModel();
+        liztModel.addElement("Race 1");
+        RaceList.setModel(liztModel);
+        RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    }
+    //REDO WITH NEW CONSTRUCTOR W/ PARAM ARRAYLIST<ARRAYLIST<ARRAYLIST>> B
+    public CreateBallot(ArrayList<ArrayList> B) {
+        initComponents();
+        model=(DefaultTableModel)CanTable.getModel();
+        liztModel=new DefaultListModel();
+        int cnt=B.size();
+        
+        for(int i=0;i<cnt;i++)
+        {
+            liztModel.addElement(B.get(i).get(0));//populate RaceList //fix
+        }
+        int cnt2= B.get(0).size();
+        /*
+        
+        if(cnt2>1)
+        {
+            //fix CanTable to 1st race
+            for(int i=1;i<cnt2;i++)
+            {
+              model.insertRow(model.getRowCount(),new Object[]{B.get(0).get(i).get(0),
+                  B.get(0).get(i).get(1),B.get(0).get(i).get(2),B.get(0).get(i).get(3),
+                  B.get(0).get(i).get(4),B.get(0).get(i).get(5),B.get(0).get(i).get(6)});
+            }
+        }
+        */
+        RaceNameLabel.setText((String)B.get(0).get(0));//fix
+        char a=((String)B.get(0).get(1)).charAt(0);//fix
+        if(a=='v')
+        {
+            //vote for one or vote for many
+            String g=((String)B.get(0).get(1)).substring(1);//fix
+            VoteLabel.setText(g);    
+        } 
+        else if(a=='m')
+        {
+            //some other voting schematic
+        }
+        RaceList.setModel(liztModel);
+        RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
     /**
@@ -73,9 +124,10 @@ public class CreateBallot extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        RaceList = new javax.swing.JList<>();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        DuplButton = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -327,20 +379,32 @@ public class CreateBallot extends javax.swing.JFrame {
 
         jButton1.setText("Add Race");
 
-        jButton2.setText("Remove Race");
+        jButton2.setText("Remove Selected Race");
 
-        jButton5.setText("Edit Race");
+        jButton5.setText("Update Selected Race");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        RaceList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Race 1", "Race 2", "Race 3", "Race 4", "Race 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(jList1);
+        RaceList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RaceListMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(RaceList);
 
         jLabel9.setText("Election Races");
 
         jLabel10.setText("Ballot Creation");
+
+        DuplButton.setText("Duplicate Race");
+        DuplButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DuplButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -349,7 +413,13 @@ public class CreateBallot extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -361,15 +431,14 @@ public class CreateBallot extends javax.swing.JFrame {
                                 .addComponent(exitButton))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(DuplButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(saveButton))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(saveButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -386,21 +455,38 @@ public class CreateBallot extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
-                        .addGap(11, 11, 11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(DuplButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(saveButton)
-                            .addComponent(jButton2)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 11, Short.MAX_VALUE)
+                                .addComponent(saveButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        model.insertRow(model.getRowCount(),new Object[]{studIdText.getText(),fNameText.getText(),lNameText.getText(),aText.getText(),sText.getText(),rText.getText(),yText.getText()});
+        model.insertRow(model.getRowCount(),new Object[]{studIdText.getText(),fNameText.getText(),
+            lNameText.getText(),aText.getText(),sText.getText(),rText.getText(),yText.getText()});
+        //ArrayList g=new ArrayList();
+        //g.add(studIdText.getText());
+        //g.add(fNameText.getText());
+        //g.add(lNameText.getText());
+        //g.add(aText.getText());
+        //g.add(sText.getText());
+        //g.add(rText.getText());
+        //g.add(yText.getText());
+        //Updates Ballot.get(currentRace).add(g);
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void CanTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CanTableMouseClicked
@@ -414,16 +500,28 @@ public class CreateBallot extends javax.swing.JFrame {
     }//GEN-LAST:event_CanTableMouseClicked
 
     private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        model.setValueAt(studIdText.getText(), CanTable.getSelectedRow(),0);
-        model.setValueAt(fNameText.getText(), CanTable.getSelectedRow(),1);
-        model.setValueAt(lNameText.getText(), CanTable.getSelectedRow(),2);
-        model.setValueAt(aText.getText(), CanTable.getSelectedRow(),3);
-        model.setValueAt(sText.getText(), CanTable.getSelectedRow(),4);
-        model.setValueAt(rText.getText(), CanTable.getSelectedRow(),5);
-        model.setValueAt(yText.getText(), CanTable.getSelectedRow(),6);
+        int b=CanTable.getSelectedRow();
+        model.setValueAt(studIdText.getText(), b,0);
+        model.setValueAt(fNameText.getText(), b,1);
+        model.setValueAt(lNameText.getText(), b,2);
+        model.setValueAt(aText.getText(), b,3);
+        model.setValueAt(sText.getText(), b,4);
+        model.setValueAt(rText.getText(), b,5);
+        model.setValueAt(yText.getText(), b,6);
+        //Ballot.get(currentRace).get(1+b).set(studIdText.getText())
+        //Ballot.get(currentRace).get(1+b).set(fNameText.getText())
+        //Ballot.get(currentRace).get(1+b).set(lNameText.getText())
+        //Ballot.get(currentRace).get(1+b).set(aText.getText())
+        //Ballot.get(currentRace).get(1+b).set(sText.getText())
+        //Ballot.get(currentRace).get(1+b).set(rText.getText())
+        //Ballot.get(currentRace).get(1+b).set(yText.getText())
     }//GEN-LAST:event_editButtonActionPerformed
 
     private void delButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delButtonActionPerformed
+        //Searches Ballot.get(currentRace).get(i).get(0)//i=1 through size()-1
+        //if(Ballot.get(currentRace).get(i).get(0)==CanTable.getSelected())
+        //Ballot.get(currentRace).remove(i);
+        //exits loop
         model.removeRow(CanTable.getSelectedRow());
     }//GEN-LAST:event_delButtonActionPerformed
 
@@ -439,16 +537,18 @@ public class CreateBallot extends javax.swing.JFrame {
                 //VoteLabel.setText(VoteNum);
                 break;
         }
+        //updates Ballot.get(currentRace).set(1);//fix
     }//GEN-LAST:event_voteSetButtonActionPerformed
 
     private void raceSetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raceSetButtonActionPerformed
         RaceNameLabel.setText(RaceNameText.getText());
+        //updates Ballot.get(currentRace).set(0);//fix
     }//GEN-LAST:event_raceSetButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         //Exit, No Data Saved
         //Pop-up "No data will be saved, are you sure?"
-        //if continue
+        //if "yes" continue
         this.setVisible(false);
         new CreateModifyBallot().setVisible(true);
         //else
@@ -457,15 +557,28 @@ public class CreateBallot extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         //Save Data here in Array List
-        //Ask if they would like to save as a template as well
         //Ballot(Race1(Name,Vote,Candidates()...),Race2(Name,Vote,Candidates()...),...)
         this.setVisible(false);
-        new CreateModifyBallot().setVisible(true);
+        new CreateModifyBallot(Ballot).setVisible(true);
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void RaceNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaceNameTextActionPerformed
-        // TODO add your handling code here:
+        //can be deleted
     }//GEN-LAST:event_RaceNameTextActionPerformed
+
+    private void DuplButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DuplButtonActionPerformed
+        //updates RaceList
+        //creates Ballot.add(Race)
+        //updates Ballot.get(size()-1).
+        //updates currentRace
+    }//GEN-LAST:event_DuplButtonActionPerformed
+
+    private void RaceListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RaceListMouseClicked
+        //updates RaceTextLabel
+        //updates VoteLabel
+        //updates CanTable
+        //Updates currentRace;
+    }//GEN-LAST:event_RaceListMouseClicked
 
     /**
      * @param args the command line arguments
@@ -505,6 +618,8 @@ public class CreateBallot extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable CanTable;
     private javax.swing.JButton ClearButton;
+    private javax.swing.JButton DuplButton;
+    private javax.swing.JList<String> RaceList;
     private javax.swing.JLabel RaceNameLabel;
     private javax.swing.JTextField RaceNameText;
     private javax.swing.JComboBox<String> VoteComboBox;
@@ -530,7 +645,6 @@ public class CreateBallot extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

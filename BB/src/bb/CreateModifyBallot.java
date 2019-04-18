@@ -5,14 +5,20 @@
  */
 package bb;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Chris
  */
 public class CreateModifyBallot extends javax.swing.JFrame {
-
+    private ArrayList Ballot=null;
     public CreateModifyBallot() {
         initComponents();
+    }
+    public CreateModifyBallot(ArrayList B) {
+        initComponents();
+        Ballot = new ArrayList(B);
     }
     
     /**
@@ -25,25 +31,17 @@ public class CreateModifyBallot extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        CreateButton = new javax.swing.JButton();
-        ModifyButton = new javax.swing.JButton();
+        CreateModifyBallot = new javax.swing.JButton();
         ExitButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Create/Modify Ballot");
 
-        CreateButton.setText("Create Ballot");
-        CreateButton.addActionListener(new java.awt.event.ActionListener() {
+        CreateModifyBallot.setText("Create/Modify Ballot");
+        CreateModifyBallot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreateButtonActionPerformed(evt);
-            }
-        });
-
-        ModifyButton.setText("Modify Ballot");
-        ModifyButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModifyButtonActionPerformed(evt);
+                CreateModifyBallotActionPerformed(evt);
             }
         });
 
@@ -58,47 +56,40 @@ public class CreateModifyBallot extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ExitButton)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CreateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ModifyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ExitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(CreateModifyBallot)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(CreateButton)
-                .addGap(50, 50, 50)
-                .addComponent(ModifyButton)
-                .addGap(62, 62, 62)
-                .addComponent(ExitButton)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ExitButton)
+                    .addComponent(jLabel1))
+                .addGap(63, 63, 63)
+                .addComponent(CreateModifyBallot)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateButtonActionPerformed
-        //Change so it gives template option first
+    private void CreateModifyBallotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateModifyBallotActionPerformed
+        //if Ballot=null;
+        if(Ballot==null)
+            new ModifyBallot().setVisible(true);
+        else
+            new CreateBallot(Ballot).setVisible(true);
         this.setVisible(false);
-        new CreateBallot().setVisible(true);
-    }//GEN-LAST:event_CreateButtonActionPerformed
-
-    private void ModifyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModifyButtonActionPerformed
-        //change so it gives selection option first
-        this.setVisible(false);
-        new ModifyBallot().setVisible(true);
-    }//GEN-LAST:event_ModifyButtonActionPerformed
+    }//GEN-LAST:event_CreateModifyBallotActionPerformed
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         this.setVisible(false);     // TODO add your handling code here:
@@ -141,9 +132,8 @@ public class CreateModifyBallot extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreateButton;
+    private javax.swing.JButton CreateModifyBallot;
     private javax.swing.JButton ExitButton;
-    private javax.swing.JButton ModifyButton;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
