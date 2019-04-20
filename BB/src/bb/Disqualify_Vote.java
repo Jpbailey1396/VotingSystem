@@ -1,5 +1,10 @@
 package bb;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,6 +17,7 @@ package bb;
  */
 public class Disqualify_Vote extends javax.swing.JFrame {
     Disqualify_Vote_Page DvP;
+    public static ArrayList<Student_info> student = new ArrayList();
     /**
      * Creates new form Disqualify_Vote
      */
@@ -22,7 +28,23 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         initComponents();
         Student_ID.setText(id);
     }
-    
+    public Disqualify_Vote(ArrayList<Student_info> Student, int id){
+        initComponents();
+        this.student = Student;
+        Student_ID.setText(id + "");
+        
+        
+    }
+    public int searchStudent(String id){
+        int ID = Integer.parseInt(id);
+        int found = 0;
+        for(int i = 0; i<student.size(); i++){
+            if (student.get(i).getID() == ID){
+                found = i;
+            }
+        }
+        return found;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,9 +60,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         Yes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Student_ID = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Name = new javax.swing.JTextField();
+        Year = new javax.swing.JTextField();
+        Sex = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,16 +97,16 @@ public class Disqualify_Vote extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("Name");
+        Name.setText("Name");
 
-        jTextField2.setText("Year");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Year.setText("Year");
+        Year.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                YearActionPerformed(evt);
             }
         });
 
-        jTextField4.setText("Sex");
+        Sex.setText("Sex");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,7 +126,7 @@ public class Disqualify_Vote extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Student_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(No, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -112,9 +134,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
                         .addComponent(Yes, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jTextField2)
+                        .addComponent(Year)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Sex, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
@@ -126,10 +148,10 @@ public class Disqualify_Vote extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Student_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Yes)
@@ -144,7 +166,11 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Returns user back to disqualifying page
         this.setVisible(false);
-        new Disqualify_Vote_Page().setVisible(true);
+        try {
+            new Disqualify_Vote_Page().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(Disqualify_Vote.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_NoActionPerformed
 
     private void Student_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Student_IDActionPerformed
@@ -159,9 +185,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         new HSOfunc().setVisible(true);
     }//GEN-LAST:event_YesActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void YearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_YearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,13 +226,13 @@ public class Disqualify_Vote extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Name;
     private javax.swing.JButton No;
+    private javax.swing.JTextField Sex;
     private javax.swing.JTextField Student_ID;
+    private javax.swing.JTextField Year;
     private javax.swing.JButton Yes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

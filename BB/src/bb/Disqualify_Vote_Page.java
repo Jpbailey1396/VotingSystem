@@ -1,5 +1,7 @@
 package bb;
 
+
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -14,12 +16,15 @@ import javax.swing.JOptionPane;
  * @author acn00
  */
 public class Disqualify_Vote_Page extends javax.swing.JFrame {
-
+    public static Generate generate = new Generate();
+    public static ArrayList<Student_info> student = new ArrayList();
+    
     /**
      * Creates new form Disqualify_Vote
      */
-    public Disqualify_Vote_Page() {
+    public Disqualify_Vote_Page() throws IOException {
         initComponents();
+        this.student = generate.getGenerated();
     }
     //ALbert
     public String Students_ID(){
@@ -38,7 +43,17 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
             }
         } return check;
     }
-
+    /// Check if the id exist
+        public int searchStudent(String id){
+        int ID = Integer.parseInt(id);
+        int found = 0;
+        for(int i = 0; i<student.size(); i++){
+            if (student.get(i).getID() == ID){
+                found = i;
+            }
+        }
+        return found;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -160,9 +175,13 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if (checkID(Integer.parseInt(ID.getText()))){
+       /* if (checkID(Integer.parseInt(ID.getText()))){
             new Disqualify_Vote(ID.getText()).setVisible(true);
-        }else{
+        }*/
+        if (searchStudent(ID.getText()) != 0){
+            new Disqualify_Vote(student, searchStudent(ID.getText())).setVisible(true);
+        }
+        else{
             JOptionPane.showMessageDialog(this, "ID does not exist!");
         }
         

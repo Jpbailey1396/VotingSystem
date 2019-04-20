@@ -5,6 +5,10 @@
  */
 package bb;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author josia
@@ -120,8 +124,12 @@ public class HSOfunc extends javax.swing.JFrame {
     }//GEN-LAST:event_createElectionBtnActionPerformed
 
     private void disqualifyVoteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disqualifyVoteBtnActionPerformed
-        // TODO add your handling code here:
-        new Disqualify_Vote_Page().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            new Disqualify_Vote_Page().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(HSOfunc.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_disqualifyVoteBtnActionPerformed
 
     private void recountVoteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recountVoteBtnActionPerformed

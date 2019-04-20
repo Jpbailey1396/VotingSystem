@@ -7,6 +7,8 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -25,9 +27,11 @@ public class Generate {
    
     public static ArrayList<String> Names = new ArrayList();
     public static ArrayList<Student_info> student = new ArrayList();
-     public static File file = new File("Names.txt");
+    public static File file = new File("Names.txt");
+public static String path = file.getAbsolutePath();
+     public static File file2 = new File(path);
     
-     public static void main(String[]args) throws IOException{
+ /*    public static void main(String[]args) throws IOException{
   
             GetNames();
             initiate();
@@ -37,7 +41,7 @@ public class Generate {
                System.out.println("ID " + student.get(i).getID() + " Name: " + student.get(i).getName()+ " Year: "+ student.get(i).getYear());
            }
             
-     }
+     }*/
    public static void initiate() throws IOException{
       /* 	FileWriter fw;
         //fw = new FileWriter("C:\\Users\\acn00\\OneDrive\\Pictures\\CS230\\out.txt");
@@ -93,7 +97,7 @@ public class Generate {
        
               try {
 
-        Scanner sc = new Scanner(file);
+        Scanner sc = new Scanner(file2);
         int start = 0;
         String Name = "";
         while (sc.hasNext()) { 
@@ -113,7 +117,7 @@ public class Generate {
     } 
     catch (FileNotFoundException e) {
         //e.printStackTrace();
-        System.out.println("File doesn't exist!");
+        System.out.println("File doesn't exist!  Generate.Java");
     }
    }
    public ArrayList getGenerated() throws IOException{
