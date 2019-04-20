@@ -31,7 +31,10 @@ public class Disqualify_Vote extends javax.swing.JFrame {
     public Disqualify_Vote(ArrayList<Student_info> Student, int id){
         initComponents();
         this.student = Student;
-        Student_ID.setText(id + "");
+        Student_ID.setText(student.get(id).getID() + "");
+        Name.setText(student.get(id).getName() + "");
+        Year.setText(student.get(id).getYear() + "");
+        Sex.setText(student.get(id).getSex() + "");
         
         
     }

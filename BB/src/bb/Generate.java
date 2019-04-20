@@ -27,11 +27,13 @@ public class Generate {
    
     public static ArrayList<String> Names = new ArrayList();
     public static ArrayList<Student_info> student = new ArrayList();
-    public static File file = new File("Names.txt");
+   
+    public static File file = new File("test");
 public static String path = file.getAbsolutePath();
      public static File file2 = new File(path);
-    
- /*    public static void main(String[]args) throws IOException{
+     public static File file3 = new File("C:\\Users\\acn00\\TEST GIT\\VotingSystem\\BB\\Names.txt");
+    /*
+     public static void main(String[]args) throws IOException{
   
             GetNames();
             initiate();
@@ -94,10 +96,10 @@ public static String path = file.getAbsolutePath();
        student.add(student_profile4);
    }
    public static void GetNames(){
-       
+       /*
               try {
 
-        Scanner sc = new Scanner(file2);
+        Scanner sc = new Scanner(file);
         int start = 0;
         String Name = "";
         while (sc.hasNext()) { 
@@ -113,12 +115,65 @@ public static String path = file.getAbsolutePath();
                 start=0;
             }
         }
-        sc.close();
+        sc.close(); 
     } 
     catch (FileNotFoundException e) {
         //e.printStackTrace();
-        System.out.println("File doesn't exist!  Generate.Java");
+        System.out.println("File doesn't exist!  Generate.Java  File path: "+file);
     }
+    
+    */
+     String[] names = {"Maximina Burkhardt",
+"Vivienne Mielke",
+"Patrice Siewert","Edwardo Micco",
+"Nell Sen",
+"Mireya Grossman",
+"Brenton Brookman",
+"Tonda Escobedo",
+"Larue Lupi",
+"Marjory Nauman",
+"Lilliam Mehler",
+"Gaye Negri",
+"Agnes Innis",
+"Jamee Gerling",
+"Marlon Matter",
+"Adele Blodgett",
+"Beulah Harber",
+"Miesha Shoener",
+"Albertine Didonna",
+"Kendal Jiang",
+"Clinton Earhart",
+"Lourdes Bonnette","Solomon Petree", "Mickie Leleux",
+"Hollie Deasy",
+"Roxanna Carswell",
+"Sunni Kirklin",
+"Gale Schimmel",
+"Angelica Palmer",
+"Talisha Croston",
+"Laveta Opitz",
+"Scotty Lockwood",
+"Harriett Mcelveen",
+"Antonia Pullum",
+"Olimpia Dease",
+"Millard Daly",
+"Lauryn Ansell",
+"Leisa Frizell",
+"Terry Ahart",
+"Melodie Tynan",
+"Renato Ried",
+"Tatum Liner",
+"Odis Beaton",
+"Misha Primmer",
+"Arlette Berrian",
+"Marybelle Buzard",
+"Ahmed Conroy",
+"Georgene Hasan",
+"Vicenta Hoppe",
+"Rubi Curlin"
+   };
+     for(int i=0; i<names.length; i++){
+         Names.add(names[i]);
+     }
    }
    public ArrayList getGenerated() throws IOException{
             GetNames();
