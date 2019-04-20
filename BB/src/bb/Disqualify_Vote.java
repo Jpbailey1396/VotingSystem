@@ -34,8 +34,8 @@ public class Disqualify_Vote extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        Backer = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        No = new javax.swing.JButton();
+        Yes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Student_ID = new javax.swing.JTextField();
 
@@ -46,19 +46,19 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         jLabel1.setText("Are You Sure You Want To Disqulify");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        Backer.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        Backer.setText("No");
-        Backer.addActionListener(new java.awt.event.ActionListener() {
+        No.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        No.setText("No");
+        No.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BackerActionPerformed(evt);
+                NoActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton1.setText("Yes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Yes.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        Yes.setText("Yes");
+        Yes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                YesActionPerformed(evt);
             }
         });
 
@@ -78,9 +78,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(Backer, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(No, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Yes, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,26 +105,32 @@ public class Disqualify_Vote extends javax.swing.JFrame {
                 .addComponent(Student_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(Backer))
+                    .addComponent(Yes)
+                    .addComponent(No))
                 .addGap(129, 129, 129))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackerActionPerformed
+    private void NoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BackerActionPerformed
+        //Returns user back to disqualifying page
+        this.setVisible(false);
+        new Disqualify_Vote_Page().setVisible(true);
+    }//GEN-LAST:event_NoActionPerformed
 
     private void Student_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Student_IDActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_Student_IDActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void YesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        //Sends user back to HSO user page after disqualifying
+        this.setVisible(false);
+        new HSOfunc().setVisible(true);
+    }//GEN-LAST:event_YesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,9 +169,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Backer;
+    private javax.swing.JButton No;
     private javax.swing.JTextField Student_ID;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Yes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
