@@ -66,7 +66,7 @@ public class Student_info {
     }
         public String getSex(){
   
-        switch (this.Year){
+        switch (this.Sex){
             case 1:
                 return "Female";
             case 2:
