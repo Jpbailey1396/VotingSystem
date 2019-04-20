@@ -6,6 +6,8 @@
 
 package bb;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Statler
@@ -15,6 +17,56 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
     /**
      * Creates new form selectRaceStudentGov
      */
+    
+    String presidentNames = "Angla Asberry\n" +
+"Barney Broe\n" +
+"Doreen Doescher\n" +
+"Jonie Janelle\n" +
+"Kristofer Kennemer\n" +
+"Rosanna Rosenfield\n" +
+"Marquita Matranga\n" +
+"Genevieve Gallion\n" +
+"Oralee Overbey\n" +
+"Enriqueta Engh";
+    
+    String vicePresidentNames = "Elicia Elder\n" +
+"Jacalyn Justice\n" +
+"Marcella Muncy\n" +
+"Analisa Archibald\n" +
+"Nichole Nethery\n" +
+"Jerald Jaillet\n" +
+"Agnus Amaker\n" +
+"Jude Juarbe\n" +
+"Shonta Stgermain\n" +
+"Emilee Ellison";
+    
+    String secretaryNames = "Wynona Willman\n" +
+"Alexis Anchondo\n" +
+"Esta Ethier\n" +
+"Wilda Willette\n" +
+"Bella Branton\n" +
+"Verdie Velazquez\n" +
+"Jacinto Jude\n" +
+"Dorotha Duhon\n" +
+"Rocco Rudasill\n" +
+"Cori Chung";
+    String treasurerNames = "Anton Angus\n" +
+"Sherril Scher\n" +
+"Remona Regis\n" +
+"Darby Dorrough\n" +
+"Shani Swigart\n" +
+"Sadye Schriver\n" +
+"Laila Lawson\n" +
+"Hipolito Hoehne\n" +
+"Ronald Rothermel\n" +
+"Chastity Chipps";
+    
+    String presidentNamesArray [] = presidentNames.split("\n");
+    String vicePresidentArray [] = vicePresidentNames.split("\n");
+    String treasurerNamesArray [] = treasurerNames.split("\n");
+    String secretaryNamesArray [] = secretaryNames.split("\n");
+    
+    
     public selectRaceStudentGov() {
         initComponents();
     }
