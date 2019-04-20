@@ -6,6 +6,8 @@
 
 package bb;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Statler
@@ -18,6 +20,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
     public favoriteAdvVote() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,6 +50,11 @@ public class favoriteAdvVote extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setText("Go");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Back");
 
@@ -91,10 +99,30 @@ public class favoriteAdvVote extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    static String selected=null;
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        try{
+            selected = jList1.getSelectedValue().toString(); 
+        }
+        catch(NullPointerException e){
+            String st = "Please select an option";
+            JOptionPane.showMessageDialog(null, st); 
+            
+        }
+        
+        JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
+        //System.out.print(selected);
+        new castVote().setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public String getSelectedAdvisor(){
+       // selected = jList1.getSelectedValue().toString();
+        return selected;
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

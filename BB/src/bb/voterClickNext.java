@@ -156,6 +156,8 @@ public class voterClickNext extends javax.swing.JFrame {
         catch(NullPointerException e){
             String st = "Please select an option";
             JOptionPane.showMessageDialog(null, st); 
+            //JOptionPane.showConfirmDialog(null, st);
+            
         }
        
         
@@ -174,9 +176,6 @@ public class voterClickNext extends javax.swing.JFrame {
             new favoriteAdvVote().setVisible(true);
         }
         
-        else {
-                   
-        }
         
        
         
