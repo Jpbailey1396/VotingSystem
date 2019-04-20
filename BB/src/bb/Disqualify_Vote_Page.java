@@ -75,6 +75,11 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
         jLabel2.setText("User_ID");
 
         jRadioButton1.setText("Not qulified");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         jRadioButton2.setText("Illegal Vote");
 
@@ -171,6 +176,10 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_BackerActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments

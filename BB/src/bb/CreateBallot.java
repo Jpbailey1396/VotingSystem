@@ -208,6 +208,11 @@ public class CreateBallot extends javax.swing.JFrame {
         lNameText.setText("Doe");
 
         fNameText.setText("Jane");
+        fNameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fNameTextActionPerformed(evt);
+            }
+        });
 
         studIdText.setText("800000000");
 
@@ -286,6 +291,11 @@ public class CreateBallot extends javax.swing.JFrame {
         });
 
         VoteComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vote for One", "Vote for Many" }));
+        VoteComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoteComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Vote:");
 
@@ -340,7 +350,7 @@ public class CreateBallot extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(RaceNameText)
-                    .addComponent(raceSetButton, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(raceSetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -579,6 +589,14 @@ public class CreateBallot extends javax.swing.JFrame {
         //updates CanTable
         //Updates currentRace;
     }//GEN-LAST:event_RaceListMouseClicked
+
+    private void VoteComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoteComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VoteComboBoxActionPerformed
+
+    private void fNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNameTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fNameTextActionPerformed
 
     /**
      * @param args the command line arguments

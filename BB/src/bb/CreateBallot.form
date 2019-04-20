@@ -190,7 +190,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="RaceNameText" alignment="0" max="32767" attributes="0"/>
-                          <Component id="raceSetButton" alignment="0" pref="25" max="32767" attributes="0"/>
+                          <Component id="raceSetButton" alignment="0" pref="0" max="32767" attributes="0"/>
                           <Component id="jScrollPane1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -444,6 +444,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Jane"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fNameTextActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="studIdText">
                   <Properties>
@@ -477,6 +480,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VoteComboBoxActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
