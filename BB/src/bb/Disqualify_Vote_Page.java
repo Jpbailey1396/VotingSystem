@@ -21,6 +21,7 @@ public class Disqualify_Vote_Page extends javax.swing.JFrame {
     public Disqualify_Vote_Page() {
         initComponents();
     }
+    //ALbert
     public String Students_ID(){
         String Id = ID.getText();
         return Id;
