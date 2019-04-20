@@ -47,15 +47,15 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="117" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="282" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" pref="300" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="125" max="32767" attributes="0"/>
+              <EmptySpace pref="123" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,9 +64,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="222" max="-2" attributes="0"/>
-              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -87,27 +87,28 @@
         <Component class="javax.swing.JList" name="jList1">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="20">
+              <StringArray count="21">
                 <StringItem index="0" value="Cuthbert Binns"/>
-                <StringItem index="1" value=" Charity Burbage"/>
-                <StringItem index="2" value=" Alecto Carrow"/>
+                <StringItem index="1" value="Charity Burbage"/>
+                <StringItem index="2" value="Alecto Carrow"/>
                 <StringItem index="3" value="Amycus Carrow"/>
-                <StringItem index="4" value="Albus Percival Wulfric Brian Dumbledore"/>
-                <StringItem index="5" value=" Filius Flitwick"/>
-                <StringItem index="6" value=" Firenze"/>
-                <StringItem index="7" value="Gilderoy Lockhart"/>
-                <StringItem index="8" value=" Neville Longbottom"/>
-                <StringItem index="9" value=" Remus Lupin"/>
-                <StringItem index="10" value="Minerva McGonagall"/>
-                <StringItem index="11" value="Alastor Moody"/>
-                <StringItem index="12" value="Quirinus Quirrell"/>
-                <StringItem index="13" value="Aurora Sinistra "/>
-                <StringItem index="14" value="Horace Slughorn"/>
-                <StringItem index="15" value=" Severus Snape"/>
-                <StringItem index="16" value=" Pomona Sprout"/>
-                <StringItem index="17" value=" Sybill Trelawney"/>
-                <StringItem index="18" value=" Dolores Jane Umbridge"/>
-                <StringItem index="19" value=" Septima Vector"/>
+                <StringItem index="4" value="Albus Percival Wulfric"/>
+                <StringItem index="5" value="Brian Dumbledore"/>
+                <StringItem index="6" value="Filius Flitwick"/>
+                <StringItem index="7" value="Firenze"/>
+                <StringItem index="8" value="Gilderoy Lockhart"/>
+                <StringItem index="9" value="Neville Longbottom"/>
+                <StringItem index="10" value="Remus Lupin"/>
+                <StringItem index="11" value="Minerva McGonagall"/>
+                <StringItem index="12" value="Alastor Moody"/>
+                <StringItem index="13" value="Quirinus Quirrell"/>
+                <StringItem index="14" value="Aurora Sinistra "/>
+                <StringItem index="15" value="Horace Slughorn"/>
+                <StringItem index="16" value="Severus Snape"/>
+                <StringItem index="17" value="Pomona Sprout"/>
+                <StringItem index="18" value="Sybill Trelawney"/>
+                <StringItem index="19" value="Dolores Jane Umbridge"/>
+                <StringItem index="20" value="Septima Vector"/>
               </StringArray>
             </Property>
           </Properties>

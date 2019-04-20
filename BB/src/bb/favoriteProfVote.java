@@ -49,7 +49,7 @@ public class favoriteProfVote extends javax.swing.JFrame {
         jLabel1.setText("Vote for your Favorite Advisor");
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Cuthbert Binns", " Charity Burbage", " Alecto Carrow", "Amycus Carrow", "Albus Percival Wulfric Brian Dumbledore", " Filius Flitwick", " Firenze", "Gilderoy Lockhart", " Neville Longbottom", " Remus Lupin", "Minerva McGonagall", "Alastor Moody", "Quirinus Quirrell", "Aurora Sinistra ", "Horace Slughorn", " Severus Snape", " Pomona Sprout", " Sybill Trelawney", " Dolores Jane Umbridge", " Septima Vector" };
+            String[] strings = { "Cuthbert Binns", "Charity Burbage", "Alecto Carrow", "Amycus Carrow", "Albus Percival Wulfric", "Brian Dumbledore", "Filius Flitwick", "Firenze", "Gilderoy Lockhart", "Neville Longbottom", "Remus Lupin", "Minerva McGonagall", "Alastor Moody", "Quirinus Quirrell", "Aurora Sinistra ", "Horace Slughorn", "Severus Snape", "Pomona Sprout", "Sybill Trelawney", "Dolores Jane Umbridge", "Septima Vector" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
@@ -62,21 +62,21 @@ public class favoriteProfVote extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(98, 98, 98)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(39, 39, 39)
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
