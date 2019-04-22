@@ -5,6 +5,9 @@
  */
 package bb;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author josia
@@ -16,6 +19,11 @@ public class SelectMenu extends javax.swing.JFrame {
      */
     public SelectMenu() {
         initComponents();
+        //making it appear in centre - Joseph 
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+//        setSize(500, 400);
+//        setLocation(200, 200);
     }
 
     /**

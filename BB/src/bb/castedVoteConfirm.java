@@ -6,6 +6,9 @@
 
 package bb;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Joseph Mahiya
@@ -18,6 +21,8 @@ public class castedVoteConfirm extends javax.swing.JFrame {
     public castedVoteConfirm() {
         initComponents();
         jLabel1.setText("Your vote has successfully been recorded");
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**

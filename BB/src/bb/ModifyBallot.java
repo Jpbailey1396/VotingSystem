@@ -5,6 +5,8 @@
  */
 package bb;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.ListSelectionModel;
@@ -23,6 +25,8 @@ public class ModifyBallot extends javax.swing.JFrame {
         Ballot=new ArrayList();
         //TempList.setList;
         TempList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     //Homecoming Template
     private void initHome()  {

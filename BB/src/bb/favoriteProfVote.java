@@ -7,6 +7,8 @@
 package bb;
 
 import static bb.favoriteAdvVote.selected;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +22,8 @@ public class favoriteProfVote extends javax.swing.JFrame {
      */
     public favoriteProfVote() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**

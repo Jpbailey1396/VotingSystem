@@ -1,5 +1,7 @@
 package bb;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -23,10 +25,14 @@ public class Disqualify_Vote extends javax.swing.JFrame {
      */
     public Disqualify_Vote() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     public Disqualify_Vote(String id) {
         initComponents();
         Student_ID.setText(id);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     public Disqualify_Vote(ArrayList<Student_info> Student, int id){
         initComponents();
@@ -35,6 +41,8 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         Name.setText(student.get(id).getName() + "");
         Year.setText(student.get(id).getYear() + "");
         Sex.setText(student.get(id).getSex() + "");
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
         
     }

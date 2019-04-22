@@ -5,6 +5,8 @@
  */
 package bb;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.Icon;
@@ -34,6 +36,8 @@ public class CreateBallot extends javax.swing.JFrame {
         liztModel.addElement("Race 1");
         RaceList.setModel(liztModel);
         RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     //REDO WITH NEW CONSTRUCTOR W/ PARAM ARRAYLIST<ARRAYLIST<ARRAYLIST>> B
     public CreateBallot(ArrayList<ArrayList> B) {
