@@ -88,12 +88,14 @@ public static String path = file.getAbsolutePath();
                 
        Student_info student_profile1 = new Student_info(800198285, "Andrew Solomon", 3, 5, 2);
        student.add(student_profile1);
-       Student_info student_profile2 = new Student_info(800133730, "Josiah Bailey", 3, 3, 2);
+       Student_info student_profile2 = new Student_info(800133730, "Josiah Bailey", 4, 3, 2);
        student.add(student_profile2);
        Student_info student_profile3 = new Student_info(800242959, "Joseph Mahiya", 3, 2, 2);
        student.add(student_profile3);
        Student_info student_profile4 = new Student_info(800198078, "Albert Nunez", 3, 2, 2);
        student.add(student_profile4);
+       Student_info student_profile5 = new Student_info(800253274, "Chris Sydnor", 4, 3, 2);
+       student.add(student_profile5);
    }
    public static void GetNames(){
        /*

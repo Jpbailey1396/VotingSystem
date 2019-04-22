@@ -40,8 +40,7 @@ public class CreateBallot extends javax.swing.JFrame {
         liztModel.addElement("Race 1");
         RaceList.setModel(liztModel);
         RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        
-        
+   
     }
     //REDO WITH NEW CONSTRUCTOR W/ PARAM ARRAYLIST<ARRAYLIST<ARRAYLIST>> B
     public CreateBallot(ArrayList<ArrayList> B) {
@@ -86,7 +85,6 @@ public class CreateBallot extends javax.swing.JFrame {
         RaceList.setModel(liztModel);
         RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
