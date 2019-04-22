@@ -25,12 +25,14 @@ public class Disqualify_Vote extends javax.swing.JFrame {
      */
     public Disqualify_Vote() {
         initComponents();
+        setSize(1100, 900);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
     public Disqualify_Vote(String id) {
         initComponents();
         Student_ID.setText(id);
+        setSize(1100, 900);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
@@ -41,6 +43,7 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         Name.setText(student.get(id).getName() + "");
         Year.setText(student.get(id).getYear() + "");
         Sex.setText(student.get(id).getSex() + "");
+        setSize(1100, 900);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         

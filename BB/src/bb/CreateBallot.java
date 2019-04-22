@@ -25,23 +25,30 @@ public class CreateBallot extends javax.swing.JFrame {
     /**
      * Creates new form CreateBallot
      */
+    
     DefaultTableModel model;
     DefaultListModel liztModel;
     private ArrayList Ballot=null;
     private int currentRace;
     public CreateBallot() {
         initComponents();
+        setSize(1100, 900);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         model=(DefaultTableModel)CanTable.getModel();
         liztModel=new DefaultListModel();
         liztModel.addElement("Race 1");
         RaceList.setModel(liztModel);
         RaceList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
+        
     }
     //REDO WITH NEW CONSTRUCTOR W/ PARAM ARRAYLIST<ARRAYLIST<ARRAYLIST>> B
     public CreateBallot(ArrayList<ArrayList> B) {
         initComponents();
+        setSize(1100, 900);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         model=(DefaultTableModel)CanTable.getModel();
         liztModel=new DefaultListModel();
         int cnt=B.size();
