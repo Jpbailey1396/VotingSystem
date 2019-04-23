@@ -102,12 +102,11 @@ public class ModifyBallot extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Select Template");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        ContButton.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         ContButton.setText("Continue");
         ContButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +114,7 @@ public class ModifyBallot extends javax.swing.JFrame {
             }
         });
 
-        TempList.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        TempList.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         TempList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Homecoming", "Favorite Professor", "Favorite Advisor", "Student Government", "Blank" };
             public int getSize() { return strings.length; }
@@ -123,7 +122,6 @@ public class ModifyBallot extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TempList);
 
-        ExitButton.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         ExitButton.setText("Exit");
         ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +167,7 @@ public class ModifyBallot extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
