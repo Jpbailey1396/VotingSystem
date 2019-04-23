@@ -8,6 +8,7 @@ package bb;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.DefaultListModel;
 import javax.swing.Icon;
 import javax.swing.JFrame;
@@ -496,7 +497,7 @@ public class CreateBallot extends javax.swing.JFrame {
             {
                 if(Ballot.get(currentRace).get(i).get(0).equals(studIdText.getText()))
                 {
-                    //display error message "Multiple people can't share the same id"
+                    JOptionPane.showMessageDialog(null,"Multiple people can't share the same id","WARNING",JOptionPane.QUESTION_MESSAGE);
                     g=false;
                 }
             }
@@ -549,9 +550,9 @@ public class CreateBallot extends javax.swing.JFrame {
         int i=1;
         boolean g=true;
         int size=Ballot.get(currentRace).size();
-        while(g=true & i<size)
+        while(g==true & i<size)
         {
-          if(Ballot.get(currentRace).get(i).get(0) == model.getValueAt(CanTable.getSelectedRow(),0))
+          if(Ballot.get(currentRace).get(i).get(0).equals(model.getValueAt(CanTable.getSelectedRow(),0)))
           {
               Ballot.get(currentRace).remove(i);
               g=false;
@@ -565,6 +566,7 @@ public class CreateBallot extends javax.swing.JFrame {
     private void voteSetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voteSetButtonActionPerformed
         String lab=(String)VoteComboBox.getSelectedItem();
         String votes="";
+        boolean g=true;
         int VoteNum=0;
         switch(lab){
             case "Vote for One":
@@ -572,15 +574,28 @@ public class CreateBallot extends javax.swing.JFrame {
                 votes="v1";
                 break;
             case "Vote for Many":
-                //Create Dialog Box that asks for vote count input
-                //saves input number
-                //VoteLabel.setText(VoteNum);
-                votes="v"+VoteNum;
+                while(g==true)
+                {
+                    String select=(String) JOptionPane.showInputDialog(null,"Enter the amount of candidates to be selected","INPUT",JOptionPane.QUESTION_MESSAGE,null,null,"2");
+                    if(isInteger(select,10)==true)
+                    {
+                        votes="v"+select;
+                        VoteLabel.setText(select);
+                        g=false;
+                    }
+                }
                 break;
         }
         Ballot.get(currentRace).get(0).set(1,votes);//fix
     }//GEN-LAST:event_voteSetButtonActionPerformed
-
+    public static boolean isInteger(String s, int radix)
+    {
+        Scanner sc=new Scanner(s.trim());
+        if(!sc.hasNextInt(radix)) 
+            return false;
+        sc.nextInt(radix);
+        return !sc.hasNext();
+    }
     private void raceSetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_raceSetButtonActionPerformed
         RaceNameLabel.setText(RaceNameText.getText());
         Ballot.get(currentRace).get(0).set(0,RaceNameText.getText());
@@ -591,19 +606,22 @@ public class CreateBallot extends javax.swing.JFrame {
         //Exit, No Data Saved
         //Pop-up "No data will be saved, are you sure?"
         //if "yes" continue
-        this.setVisible(false);
-        boolean g=true;
-        int i=0;
-        while (g & i<exitBallot.size() )
-        {
-            if(exitBallot.get(i).size()>1)
-                g=false;
-            i++;
+        int res=JOptionPane.showConfirmDialog(this,"No data will be saved\nAre you sure you wish to return?", "WARNING", JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+        if(res==JOptionPane.YES_OPTION){
+            this.setVisible(false);
+            boolean g=true;
+            int i=0;
+            while (g & i<exitBallot.size() )
+            {
+                if(exitBallot.get(i).size()>1)
+                    g=false;
+                i++;
+            }
+            if(g==false)
+                new CreateModifyBallot(exitBallot).setVisible(true);
+            else
+                new CreateModifyBallot().setVisible(true);
         }
-        if(g==false)
-            new CreateModifyBallot(exitBallot).setVisible(true);
-        else
-            new CreateModifyBallot().setVisible(true);
         //else
         //do nothing
 

@@ -32,34 +32,42 @@ public class ModifyBallot extends javax.swing.JFrame {
         //fix
         ArrayList King=new ArrayList();
         ArrayList Queen=new ArrayList();
-        King.add("King");
-        King.add("v1");
+        ArrayList Temp1=new ArrayList();
+        ArrayList Temp2=new ArrayList();
+        Temp1.add("King");
+        Temp1.add("v1");
                 //vote for 1:v1
                 //vote for 2:v2
                 //...
-        Queen.add("Queen");
-        Queen.add("v1");
+        Temp2.add("Queen");
+        Temp2.add("v1");
+        King.add(Temp1);
+        Queen.add(Temp2);
         Ballot.add(King);
         Ballot.add(Queen);
     }
     private void initFavProf(){
         //fix
         ArrayList FavProf=new ArrayList();
-        FavProf.add("Favorite Professor");
-        FavProf.add("v1");
+        ArrayList Temp1=new ArrayList();
+        Temp1.add("Favorite Professor");
+        Temp1.add("v1");
                 //vote for 1:v1
                 //vote for 2:v2
                 //...
+        FavProf.add(Temp1);
         Ballot.add(FavProf);
     }
     private void initFavAdv(){
         //fix
         ArrayList FavAdv=new ArrayList();
-        FavAdv.add("Favorite Advisor");
-        FavAdv.add("v1");
+        ArrayList Temp1=new ArrayList();
+        Temp1.add("Favorite Advisor");
+        Temp1.add("v1");
                 //vote for 1:v1
                 //vote for 2:v2
                 //...
+        FavAdv.add(Temp1);
         Ballot.add(FavAdv);
     }
     private void initStdGov(){
@@ -68,22 +76,31 @@ public class ModifyBallot extends javax.swing.JFrame {
         ArrayList Secretary=new ArrayList();
         ArrayList VPresident=new ArrayList();
         ArrayList President=new ArrayList();
-        BoardofGov.add("Board of Governors");
-        BoardofGov.add("v3");
+        ArrayList Temp1=new ArrayList();
+        ArrayList Temp2=new ArrayList();
+        ArrayList Temp3=new ArrayList();
+        ArrayList Temp4=new ArrayList();
+        Temp1.add("Board of Governors");
+        Temp1.add("v3");
                 //vote for 1:v1
                 //vote for 2:v2
                 //...
-        Secretary.add("Secretary");
-        Secretary.add("v1");
-        VPresident.add("Vice President");
-        VPresident.add("v1");
-        President.add("President");
-        President.add("v1");
+        Temp2.add("Secretary");
+        Temp2.add("v1");
+        Temp3.add("Vice President");
+        Temp3.add("v1");
+        Temp4.add("President");
+        Temp4.add("v1");
+        BoardofGov.add(Temp1);
+        Secretary.add(Temp2);
+        VPresident.add(Temp3);
+        President.add(Temp4);
         Ballot.add(BoardofGov);
         Ballot.add(Secretary);
         Ballot.add(VPresident);
         Ballot.add(President);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
