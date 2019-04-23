@@ -484,7 +484,9 @@ public class createElectionFunc extends javax.swing.JFrame {
         
         if(check1 == 1 && check2 == 1 && check3==1)
         {
+            this.setVisible(false);
             new createElectionConfor(nameOutput,ecOutput,dateOutput).setVisible(true);
+            
         }
         
     }//GEN-LAST:event_confirmElectionBtnActionPerformed
