@@ -56,7 +56,7 @@ public class favoriteProfVote extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(780, 500));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jLabel1.setText("Vote for your Favorite Advisor");
+        jLabel1.setText("Vote for your Favorite Professor");
 
         jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
