@@ -6,6 +6,9 @@
 
 package bb;
 
+import static bb.favoriteAdvVote.selected;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Joseph Mahiya
@@ -30,7 +33,7 @@ public class secretary extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
+        secList = new javax.swing.JList();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -40,13 +43,13 @@ public class secretary extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
         jLabel1.setText("Vote for Secretary");
 
-        jList1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        secList.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        secList.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Kari\tReed", "Edna\tWallace", "Rosa\tSchneider", "Michele\tGrant", "Gladys\tFuller", "Catherine\tMoss", "Alexandra\tNelson", "Whitney\tPotter", "Vicky\tLynch", "Jacqueline\tCastillo" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(secList);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -63,6 +66,11 @@ public class secretary extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Next");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,9 +110,28 @@ public class secretary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    static String selected=null;
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+           try{
+            selected = secList.getSelectedValue().toString(); 
+        }
+        catch(NullPointerException e){
+            String st = "Please select an option";
+            JOptionPane.showMessageDialog(null, st); 
+            
+        }
+        
+        JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
+        //System.out.print(selected);
+        new castVote().setVisible(true);
+     
+    }//GEN-LAST:event_jButton2ActionPerformed
+    public String getSelectedAdvisor(){
+       // selected = jList1.getSelectedValue().toString();
+        return selected;
+    }
     /**
      * @param args the command line arguments
      */
@@ -144,7 +171,7 @@ public class secretary extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JList jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList secList;
     // End of variables declaration//GEN-END:variables
 }
