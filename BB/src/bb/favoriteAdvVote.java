@@ -56,7 +56,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setBackground(new java.awt.Color(0, 0, 102));
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +66,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(0, 0, 102));
-        jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
