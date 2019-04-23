@@ -110,7 +110,7 @@ public class Recount_Conformation_Page extends javax.swing.JFrame {
         // TODO add your handling code here:
         String st3 = "Recounting completed as requested!";
             JOptionPane.showMessageDialog(null, st3); 
-         new View_Results().setVisible(true);
+         new Updated_Results().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
