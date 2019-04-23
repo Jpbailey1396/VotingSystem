@@ -42,6 +42,7 @@ public class king extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Rosario Feit", "Emmitt Madison", "Otto Madruga", "Perry Batz", "Trent Seth", "Zack Dollins", "Stewart Guan", "Boyd Aho", "Bryan Smeltzer", "Vern Hagberg" };
             public int getSize() { return strings.length; }
@@ -49,8 +50,12 @@ public class king extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Vote for Homecoming King");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +63,9 @@ public class king extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Next");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +92,7 @@ public class king extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(159, 159, 159)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 158, Short.MAX_VALUE)))
+                        .addGap(0, 123, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -96,7 +104,7 @@ public class king extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 145, Short.MAX_VALUE))
+                        .addGap(41, 134, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

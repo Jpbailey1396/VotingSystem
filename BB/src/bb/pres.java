@@ -37,9 +37,12 @@ public class pres extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(780, 500));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Vote for President");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +50,9 @@ public class pres extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +60,7 @@ public class pres extends javax.swing.JFrame {
             }
         });
 
-        jList1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Josh Wood\t- Connect Party     ", "Kelly Diaz\t- Focua Party", "Shelley Stephens\t- Realist Party", "Felicia Cohen\t- Change for Change Party", "Audrey Allen\t- Pacifiers", "Alexander Curtis\t- Real Patriots ", " " };
             public int getSize() { return strings.length; }
@@ -81,7 +87,7 @@ public class pres extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(245, 245, 245)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 137, Short.MAX_VALUE)))
+                        .addGap(0, 219, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -91,7 +97,7 @@ public class pres extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(128, 128, 128)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))

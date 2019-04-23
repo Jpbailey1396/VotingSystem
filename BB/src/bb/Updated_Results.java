@@ -46,11 +46,11 @@ public class Updated_Results extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Results");
 
         jButton2.setBackground(new java.awt.Color(0, 0, 102));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("View Demographics");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -61,38 +61,38 @@ public class Updated_Results extends javax.swing.JFrame {
 
         jProgressBar2.setValue(22);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel3.setText("Danny Remmington");
 
         jProgressBar1.setValue(17);
 
         jProgressBar3.setValue(70);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel4.setText("Omilia Evergreen");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel2.setText("Ellis Burningham");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 0, 0));
         jLabel5.setText("13%");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 0, 0));
         jLabel6.setText("15%");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel7.setText("72%");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel10.setText("58 Votes");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(204, 0, 0));
         jLabel8.setText("13 Votes ");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(204, 0, 0));
         jLabel9.setText("14 Votes");
 
@@ -122,14 +122,13 @@ public class Updated_Results extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel10))
                         .addGap(37, 37, 37))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(310, 310, 310)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(318, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,7 +150,7 @@ public class Updated_Results extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
@@ -163,7 +162,7 @@ public class Updated_Results extends javax.swing.JFrame {
         );
 
         jButton1.setBackground(new java.awt.Color(0, 0, 102));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

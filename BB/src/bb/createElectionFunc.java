@@ -48,17 +48,6 @@ public class createElectionFunc extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         majorPanel = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        List<String> collegeWords = new ArrayList<String>();
-        collegeWords.add("Engineering");
-        collegeWords.add("Mathematics");
-        collegeWords.add("Law");
-        collegeWords.add("Medical");
-        collegeWords.add("Arts");
-        collegeWords.add("Physics");
-        collegeWords.add("Social Work");
-        StringSearchable searchCollege = new StringSearchable(collegeWords);
-        CollegeCombo = new bb.AutocompleteJComboBox(searchCollege);
         collegePanel = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         List<String> MajorWords = new ArrayList<String>();
@@ -74,12 +63,22 @@ public class createElectionFunc extends javax.swing.JFrame {
         MajorWords.add("Business");
         StringSearchable searchMajor = new StringSearchable(MajorWords);
         MajorCombo = new bb.AutocompleteJComboBox(searchMajor);
-        demoPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         demoList = new javax.swing.JList<>();
-        jLabel5 = new javax.swing.JLabel();
-        addDemoBtn = new javax.swing.JButton();
         removeBtn = new javax.swing.JButton();
+        addDemoBtn = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        List<String> collegeWords = new ArrayList<String>();
+        collegeWords.add("Engineering");
+        collegeWords.add("Mathematics");
+        collegeWords.add("Law");
+        collegeWords.add("Medical");
+        collegeWords.add("Arts");
+        collegeWords.add("Physics");
+        collegeWords.add("Social Work");
+        StringSearchable searchCollege = new StringSearchable(collegeWords);
+        CollegeCombo = new bb.AutocompleteJComboBox(searchCollege);
+        jLabel9 = new javax.swing.JLabel();
         namePanel = new javax.swing.JPanel();
         dateField = new javax.swing.JTextField();
         nameField = new javax.swing.JTextField();
@@ -106,33 +105,24 @@ public class createElectionFunc extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(780, 500));
         setResizable(false);
 
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Create Election");
-
-        jLabel9.setText("College");
 
         javax.swing.GroupLayout majorPanelLayout = new javax.swing.GroupLayout(majorPanel);
         majorPanel.setLayout(majorPanelLayout);
         majorPanelLayout.setHorizontalGroup(
             majorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(majorPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(majorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 713, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         majorPanelLayout.setVerticalGroup(
             majorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(majorPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 76, Short.MAX_VALUE)
         );
 
+        jLabel10.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel10.setText("Major");
 
+        demoList.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         demoList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = {""};
             public int getSize() { return strings.length; }
@@ -140,15 +130,9 @@ public class createElectionFunc extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(demoList);
 
-        jLabel5.setText("Selected Demographics");
-
-        addDemoBtn.setText("Add");
-        addDemoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addDemoBtnActionPerformed(evt);
-            }
-        });
-
+        removeBtn.setBackground(new java.awt.Color(0, 0, 102));
+        removeBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        removeBtn.setForeground(new java.awt.Color(242, 172, 16));
         removeBtn.setText("Remove");
         removeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,36 +140,21 @@ public class createElectionFunc extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout demoPanelLayout = new javax.swing.GroupLayout(demoPanel);
-        demoPanel.setLayout(demoPanelLayout);
-        demoPanelLayout.setHorizontalGroup(
-            demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(demoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(demoPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, demoPanelLayout.createSequentialGroup()
-                        .addComponent(addDemoBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(removeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(demoPanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        demoPanelLayout.setVerticalGroup(
-            demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, demoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addDemoBtn)
-                    .addComponent(removeBtn)))
-        );
+        addDemoBtn.setBackground(new java.awt.Color(0, 0, 102));
+        addDemoBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        addDemoBtn.setForeground(new java.awt.Color(242, 172, 16));
+        addDemoBtn.setText("Add");
+        addDemoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addDemoBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        jLabel5.setText("Selected Demographics");
+
+        jLabel9.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        jLabel9.setText("College");
 
         javax.swing.GroupLayout collegePanelLayout = new javax.swing.GroupLayout(collegePanel);
         collegePanel.setLayout(collegePanelLayout);
@@ -193,35 +162,68 @@ public class createElectionFunc extends javax.swing.JFrame {
             collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(collegePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(MajorCombo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(demoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(addDemoBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(removeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel10)
+                        .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MajorCombo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         collegePanelLayout.setVerticalGroup(
             collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(collegePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MajorCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(demoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(removeBtn)
+                    .addComponent(addDemoBtn))
+                .addContainerGap())
         );
 
+        dateField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+
+        nameField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         nameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameFieldActionPerformed(evt);
             }
         });
 
+        ecField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel2.setText("Name");
 
+        jLabel3.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel3.setText("Date");
 
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel6.setText("EC ID");
 
+        freshCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         freshCheck.setText("Freshman");
         freshCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,22 +231,31 @@ public class createElectionFunc extends javax.swing.JFrame {
             }
         });
 
+        sophCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         sophCheck.setText("Sophmore");
 
+        juniCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         juniCheck.setText("Junior");
 
+        seniCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         seniCheck.setText("Senior");
 
+        gradCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         gradCheck.setText("Graduate");
 
+        jLabel11.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel11.setText("Rank");
 
+        jLabel8.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         jLabel8.setText("Gender");
 
+        maleCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         maleCheck.setText("Male");
 
+        femaCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         femaCheck.setText("Female");
 
+        otheCheck.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         otheCheck.setText("Other");
 
         javax.swing.GroupLayout genderPanelLayout = new javax.swing.GroupLayout(genderPanel);
@@ -312,6 +323,9 @@ public class createElectionFunc extends javax.swing.JFrame {
                 .addContainerGap(172, Short.MAX_VALUE))
         );
 
+        backBtn.setBackground(new java.awt.Color(0, 0, 102));
+        backBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        backBtn.setForeground(new java.awt.Color(242, 172, 16));
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,6 +380,7 @@ public class createElectionFunc extends javax.swing.JFrame {
                 .addComponent(backBtn))
         );
 
+        confirmElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
         confirmElectionBtn.setText("confirm");
         confirmElectionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -382,43 +397,37 @@ public class createElectionFunc extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(majorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(collegePanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(187, 187, 187)
+                        .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                        .addComponent(majorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(confirmElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(confirmElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
+                                .addGap(18, 18, 18)
+                                .addComponent(majorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel7))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(majorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                         .addComponent(confirmElectionBtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
@@ -623,7 +632,6 @@ public class createElectionFunc extends javax.swing.JFrame {
     private javax.swing.JButton confirmElectionBtn;
     private javax.swing.JTextField dateField;
     private javax.swing.JList<String> demoList;
-    private javax.swing.JPanel demoPanel;
     private javax.swing.JTextField ecField;
     private javax.swing.JCheckBox femaCheck;
     private javax.swing.JCheckBox freshCheck;

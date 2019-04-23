@@ -50,10 +50,17 @@ public class createElectionConfor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel1.setText("Are your sure you want to create this election?");
 
+        yesElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
+        yesElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        yesElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
         yesElectionBtn.setText("Back");
 
+        noElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
+        noElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        noElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
         noElectionBtn.setText("Confirm");
         noElectionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,16 +68,22 @@ public class createElectionConfor extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel2.setText("Name:");
 
+        jLabel3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel3.setText("Date:");
 
+        jLabel4.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel4.setText("EC ID:");
 
+        nameLabel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         nameLabel.setText("jLabel5");
 
+        dateLabel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         dateLabel.setText("jLabel6");
 
+        ecLabel.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         ecLabel.setText("jLabel7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -123,7 +136,7 @@ public class createElectionConfor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ecLabel)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yesElectionBtn)
                     .addComponent(noElectionBtn))

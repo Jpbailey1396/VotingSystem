@@ -32,6 +32,7 @@ public class createElectionFinal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jTextField1.setText("Election Has been Created!");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,6 +40,9 @@ public class createElectionFinal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Ok");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +68,7 @@ public class createElectionFinal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
         );

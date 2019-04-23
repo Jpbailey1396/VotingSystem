@@ -39,56 +39,46 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <Component id="namePanel" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
+                      <Component id="collegePanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="majorPanel" alignment="1" max="32767" attributes="0"/>
-                          <Component id="collegePanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="63" max="32767" attributes="0"/>
+                      <Component id="majorPanel" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="confirmElectionBtn" min="-2" pref="134" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="majorPanel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Component id="majorPanel" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="collegePanel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="collegePanel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="238" max="32767" attributes="0"/>
                       <Component id="confirmElectionBtn" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="namePanel" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="namePanel" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="59" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -96,6 +86,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="24" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Create Election"/>
       </Properties>
     </Component>
@@ -106,13 +99,47 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="javax.swing.JPanel" name="collegePanel">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <Component id="CollegeCombo" min="-2" pref="713" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <Component id="CollegeCombo" min="-2" pref="185" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="addDemoBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="removeBtn" min="-2" pref="91" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane1" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
+                              <Component id="MajorCombo" alignment="1" min="-2" pref="186" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -123,50 +150,20 @@
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CollegeCombo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="College"/>
-          </Properties>
-        </Component>
-        <Component class="bb.AutocompleteJComboBox" name="CollegeCombo">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new bb.AutocompleteJComboBox(searchCollege)"/>
-            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="List&lt;String&gt; collegeWords = new ArrayList&lt;String&gt;();&#xa;collegeWords.add(&quot;Engineering&quot;);&#xa;collegeWords.add(&quot;Mathematics&quot;);&#xa;collegeWords.add(&quot;Law&quot;);&#xa;collegeWords.add(&quot;Medical&quot;);&#xa;collegeWords.add(&quot;Arts&quot;);&#xa;collegeWords.add(&quot;Physics&quot;);&#xa;collegeWords.add(&quot;Social Work&quot;);&#xa;StringSearchable searchCollege = new StringSearchable(collegeWords);"/>
-          </AuxValues>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="collegePanel">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="MajorCombo" max="32767" attributes="0"/>
-                      <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="demoPanel" alignment="1" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="199" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="MajorCombo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="demoPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="179" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="removeBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addDemoBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -174,6 +171,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Major"/>
           </Properties>
         </Component>
@@ -183,90 +183,84 @@
             <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="List&lt;String&gt; MajorWords = new ArrayList&lt;String&gt;();&#xa;MajorWords.add(&quot;Electrical Engineering&quot;);&#xa;MajorWords.add(&quot;Computer Engineering&quot;);&#xa;MajorWords.add(&quot;Computer Science&quot;);&#xa;MajorWords.add(&quot;Art History&quot;);&#xa;MajorWords.add(&quot;Puppetry&quot;);&#xa;MajorWords.add(&quot;Mechanical Engineering&quot;);&#xa;MajorWords.add(&quot;English&quot;);&#xa;MajorWords.add(&quot;Theater&quot;);&#xa;MajorWords.add(&quot;Enviromental Science&quot;);&#xa;MajorWords.add(&quot;Business&quot;);&#xa;StringSearchable searchMajor = new StringSearchable(MajorWords);"/>
           </AuxValues>
         </Component>
-        <Container class="javax.swing.JPanel" name="demoPanel">
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel5" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="addDemoBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="removeBtn" min="-2" pref="91" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jScrollPane1" min="-2" pref="701" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="179" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="addDemoBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="removeBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Component class="javax.swing.JList" name="demoList">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.AbstractListModel&lt;String&gt;() {&#xa;    String[] strings = {&quot;&quot;};&#xa;    public int getSize() { return strings.length; }&#xa;    public String getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
+                </Property>
+              </Properties>
               <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JList" name="demoList">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="new javax.swing.AbstractListModel&lt;String&gt;() {&#xa;    String[] strings = {&quot;&quot;};&#xa;    public int getSize() { return strings.length; }&#xa;    public String getElementAt(int i) { return strings[i]; }&#xa;}" type="code"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Selected Demographics"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="addDemoBtn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Add"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addDemoBtnActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="removeBtn">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Remove"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeBtnActionPerformed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="removeBtn">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Remove"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="addDemoBtn">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Add"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addDemoBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Selected Demographics"/>
+          </Properties>
+        </Component>
+        <Component class="bb.AutocompleteJComboBox" name="CollegeCombo">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new bb.AutocompleteJComboBox(searchCollege)"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="List&lt;String&gt; collegeWords = new ArrayList&lt;String&gt;();&#xa;collegeWords.add(&quot;Engineering&quot;);&#xa;collegeWords.add(&quot;Mathematics&quot;);&#xa;collegeWords.add(&quot;Law&quot;);&#xa;collegeWords.add(&quot;Medical&quot;);&#xa;collegeWords.add(&quot;Arts&quot;);&#xa;collegeWords.add(&quot;Physics&quot;);&#xa;collegeWords.add(&quot;Social Work&quot;);&#xa;StringSearchable searchCollege = new StringSearchable(collegeWords);"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="College"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="namePanel">
@@ -333,26 +327,50 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="dateField">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nameField">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nameFieldActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ecField">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Name"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Date"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="EC ID"/>
           </Properties>
         </Component>
@@ -408,6 +426,9 @@
           <SubComponents>
             <Component class="javax.swing.JCheckBox" name="freshCheck">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Freshman"/>
               </Properties>
               <Events>
@@ -416,26 +437,41 @@
             </Component>
             <Component class="javax.swing.JCheckBox" name="sophCheck">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sophmore"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JCheckBox" name="juniCheck">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Junior"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JCheckBox" name="seniCheck">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Senior"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JCheckBox" name="gradCheck">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Graduate"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="SansSerif" size="15" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Rank"/>
               </Properties>
             </Component>
@@ -474,21 +510,33 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="15" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Gender"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="maleCheck">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="15" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Male"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="femaCheck">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="15" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Female"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="otheCheck">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="SansSerif" size="15" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Other"/>
                   </Properties>
                 </Component>
@@ -498,6 +546,15 @@
         </Container>
         <Component class="javax.swing.JButton" name="backBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="SansSerif" size="15" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
           <Events>
@@ -508,6 +565,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="confirmElectionBtn">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="15" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="confirm"/>
       </Properties>
       <Events>

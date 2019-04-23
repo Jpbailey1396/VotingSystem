@@ -55,10 +55,10 @@ public class favoriteProfVote extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(780, 500));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Vote for your Favorite Advisor");
 
-        jList1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Cuthbert Binns", "Charity Burbage", "Alecto Carrow", "Amycus Carrow", "Albus Percival Wulfric", "Brian Dumbledore", "Filius Flitwick", "Firenze", "Gilderoy Lockhart", "Neville Longbottom", "Remus Lupin", "Minerva McGonagall", "Alastor Moody", "Quirinus Quirrell", "Aurora Sinistra ", "Horace Slughorn", "Severus Snape", "Pomona Sprout", "Sybill Trelawney", "Dolores Jane Umbridge", "Septima Vector" };
             public int getSize() { return strings.length; }
@@ -66,6 +66,9 @@ public class favoriteProfVote extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +76,9 @@ public class favoriteProfVote extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 102));
+        jButton3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(242, 172, 16));
         jButton3.setText("Next");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +117,7 @@ public class favoriteProfVote extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 141, Short.MAX_VALUE))
+                        .addGap(22, 145, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
