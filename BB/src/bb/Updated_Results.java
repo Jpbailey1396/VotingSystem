@@ -57,12 +57,12 @@ public class Updated_Results extends javax.swing.JFrame {
             }
         });
 
-        jProgressBar2.setValue(10);
+        jProgressBar2.setValue(22);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Danny Remmington");
 
-        jProgressBar1.setValue(31);
+        jProgressBar1.setValue(17);
 
         jProgressBar3.setValue(70);
 
@@ -81,10 +81,11 @@ public class Updated_Results extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("15%");
+        jLabel5.setForeground(new java.awt.Color(244, 11, 50));
+        jLabel5.setText("13%");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(244, 11, 54));
         jLabel6.setText("15%");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
