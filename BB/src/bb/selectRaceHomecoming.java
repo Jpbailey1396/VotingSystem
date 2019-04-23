@@ -40,6 +40,7 @@ public class selectRaceHomecoming extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(780, 500));
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("Queen");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +49,7 @@ public class selectRaceHomecoming extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setText("King");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +61,7 @@ public class selectRaceHomecoming extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
         jLabel1.setText("Homecoming");
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 102));
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

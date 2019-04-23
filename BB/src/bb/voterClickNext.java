@@ -76,6 +76,7 @@ public class voterClickNext extends javax.swing.JFrame {
 
         jLabel1.setText("Select Election");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +84,7 @@ public class voterClickNext extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 153));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -48,8 +48,10 @@ public class treasurer extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
         jButton2.setText("Back");
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 102));
         jButton3.setText("Next");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

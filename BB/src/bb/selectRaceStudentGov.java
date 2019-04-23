@@ -96,6 +96,7 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
         jLabel1.setText("Student Government");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("President");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +105,7 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 102));
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton3.setText("Secretary");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -112,6 +114,7 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 102));
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton4.setText("Treasurer");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +123,7 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 102));
         jButton5.setText("Back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +131,7 @@ public class selectRaceStudentGov extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setText("Vice President");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
