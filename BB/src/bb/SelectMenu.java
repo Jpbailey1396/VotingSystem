@@ -41,6 +41,9 @@ public class SelectMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        hsoBtn.setBackground(new java.awt.Color(0, 51, 102));
+        hsoBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        hsoBtn.setForeground(new java.awt.Color(255, 255, 255));
         hsoBtn.setText("HSO");
         hsoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,6 +51,9 @@ public class SelectMenu extends javax.swing.JFrame {
             }
         });
 
+        ecBtn.setBackground(new java.awt.Color(0, 0, 102));
+        ecBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        ecBtn.setForeground(new java.awt.Color(255, 255, 255));
         ecBtn.setText("EC");
         ecBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +61,9 @@ public class SelectMenu extends javax.swing.JFrame {
             }
         });
 
+        vBtn.setBackground(new java.awt.Color(0, 0, 102));
+        vBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        vBtn.setForeground(new java.awt.Color(255, 255, 255));
         vBtn.setText("Voter");
         vBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,8 +81,8 @@ public class SelectMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(ecBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(vBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102))
+                .addComponent(vBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,7 +91,7 @@ public class SelectMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ecBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hsoBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(vBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(vBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(148, 148, 148))
         );
 
