@@ -449,15 +449,16 @@ public class createElectionFunc extends javax.swing.JFrame {
         String ecOutput = "";
         String dateOutput = "";
         String nameOutput = "";
+        String error = "";
 
         if(ecField.getText().equals(""))
         {
             //Show error dialog
 
-            JOptionPane.showMessageDialog(null,"EC field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
+            //JOptionPane.showMessageDialog(null,"EC field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
 
             //Erase output
-            ecOutput = "";
+            error += " ECID";
         }
         else
         {
@@ -468,10 +469,10 @@ public class createElectionFunc extends javax.swing.JFrame {
         if(dateField.getText().equals(""))
         {
             //Show error dialog
-            JOptionPane.showMessageDialog(null,"Date field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
+            //JOptionPane.showMessageDialog(null,"Date field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
 
             //Erase output
-            dateOutput = "";
+            error += " Date";
         }
         else
         {
@@ -482,9 +483,9 @@ public class createElectionFunc extends javax.swing.JFrame {
         if(nameField.getText().equals(""))
         {
             //Show error dialog
-            JOptionPane.showMessageDialog(null,"Name field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
+            //JOptionPane.showMessageDialog(null,"Name field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
             //Erase output
-            nameOutput = "";
+            error += " Name";
         }
         else
         {
@@ -497,6 +498,11 @@ public class createElectionFunc extends javax.swing.JFrame {
             this.setVisible(false);
             new createElectionConfor(nameOutput,ecOutput,dateOutput).setVisible(true);
 
+        }
+        else
+        {
+            
+            JOptionPane.showMessageDialog(null,("Required field(s) missing: " + error),"NOTICE!",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_confirmElectionBtnActionPerformed
 
