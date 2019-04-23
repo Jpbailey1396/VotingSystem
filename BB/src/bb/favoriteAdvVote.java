@@ -132,6 +132,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
         new castVote().setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -139,6 +140,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        new voterClickNext().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public String getSelectedAdvisor(){
