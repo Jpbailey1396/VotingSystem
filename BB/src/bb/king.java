@@ -119,6 +119,7 @@ public class king extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
+        new selectRaceHomecoming().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
     static String selected=null;
     
@@ -135,7 +136,7 @@ public class king extends javax.swing.JFrame {
         
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
-       
+        this.setVisible(false);
         new castVote().setVisible(true);
         
         

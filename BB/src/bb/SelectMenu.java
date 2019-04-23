@@ -166,6 +166,8 @@ public class SelectMenu extends javax.swing.JFrame {
 
     private void vBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vBtnActionPerformed
         //by joseph
+        
+        this.setVisible(false);
         new voterClick().setVisible(true);
     }//GEN-LAST:event_vBtnActionPerformed
 

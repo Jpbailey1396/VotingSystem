@@ -84,7 +84,7 @@ public class voterClickNext extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 153));
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Back");
@@ -160,17 +160,21 @@ public class voterClickNext extends javax.swing.JFrame {
         
         if(selected.equalsIgnoreCase("homecoming")){
             new selectRaceHomecoming().setVisible(true);
+            this.setVisible(false);
         }
         
         else if(selected.equalsIgnoreCase("student government")){
             new selectRaceStudentGov().setVisible(true);
+            this.setVisible(false);
         }
         
         else if(selected.equalsIgnoreCase("favorite professor")){
             new favoriteProfVote().setVisible(true);
+            this.setVisible(false);
         }
         else if(selected.equalsIgnoreCase("favorite advisor")){
             new favoriteAdvVote().setVisible(true);
+            this.setVisible(false);
         }
         
         
@@ -182,6 +186,7 @@ public class voterClickNext extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         this.setVisible(false);
+        new voterClick().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
