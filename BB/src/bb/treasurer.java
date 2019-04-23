@@ -124,9 +124,9 @@ public class treasurer extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
         this.setVisible(false);
-        new castVote().setVisible(true);
+        new castVoteTres().setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
-    public String getSelectedAdvisor(){
+    public String getSelected(){
        // selected = jList1.getSelectedValue().toString();
         return selected;
     }

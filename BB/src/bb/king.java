@@ -137,7 +137,7 @@ public class king extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
         this.setVisible(false);
-        new castVote().setVisible(true);
+        new castVoteKing().setVisible(true);
         
         
     }//GEN-LAST:event_jButton2ActionPerformed

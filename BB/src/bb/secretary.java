@@ -127,10 +127,10 @@ public class secretary extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
         this.setVisible(false);
-        new castVote().setVisible(true);
+        new castVoteSec().setVisible(true);
      
     }//GEN-LAST:event_jButton2ActionPerformed
-    public String getSelectedAdvisor(){
+    public String getSelected(){
        // selected = jList1.getSelectedValue().toString();
         return selected;
     }
