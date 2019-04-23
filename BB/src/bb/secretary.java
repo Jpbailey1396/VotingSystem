@@ -45,7 +45,7 @@ public class secretary extends javax.swing.JFrame {
 
         secList.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         secList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Kari\tReed", "Edna\tWallace", "Rosa\tSchneider", "Michele\tGrant", "Gladys\tFuller", "Catherine\tMoss", "Alexandra\tNelson", "Whitney\tPotter", "Vicky\tLynch", "Jacqueline\tCastillo" };
+            String[] strings = { "Kari Reed - Connect", "Edna Wallace - Focus", "Rosa Schneider - Realist", "Michele Grant - Change for Change", "Gladys Fuller - Pacifiers", "Catherine Moss - Real Patriots", " " };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });

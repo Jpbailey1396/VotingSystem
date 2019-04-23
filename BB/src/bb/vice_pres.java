@@ -41,7 +41,7 @@ public class vice_pres extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(760, 453));
 
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Martin Lucas", "Anthony Newton", "Sherry Estrada", "Jaime Banks", "Ray Moore", "Rosemary Vaughn", "Sadie Warren", "Melvin Rivera", "Carroll Castillo", " " };
+            String[] strings = { "Martin Lucas - Connect", "Anthony Newton - focus", "Sherry Estrada - Realist", "Jaime Banks - Change for Change", "Ray Moore - Pacifiers", "Rosemary Vaughn - Real Patriots", " ", " " };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });

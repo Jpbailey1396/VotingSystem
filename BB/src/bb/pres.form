@@ -123,7 +123,7 @@
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
               <StringArray count="7">
                 <StringItem index="0" value="Josh Wood&#x9;- Connect Party     "/>
-                <StringItem index="1" value="Kelly Diaz&#x9;- Focua Party"/>
+                <StringItem index="1" value="Kelly Diaz&#x9;- Focus Party"/>
                 <StringItem index="2" value="Shelley Stephens&#x9;- Realist Party"/>
                 <StringItem index="3" value="Felicia Cohen&#x9;- Change for Change Party"/>
                 <StringItem index="4" value="Audrey Allen&#x9;- Pacifiers"/>

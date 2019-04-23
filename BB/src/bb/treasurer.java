@@ -45,7 +45,7 @@ public class treasurer extends javax.swing.JFrame {
 
         jList1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Pam Vargas", "Gladys Carter", "Ginger Henry", "Karla Love", "Sandy Ray", "Carmen Brown", "Marianne Banks", "Katrina Daniels", "Nora Moody", "Myra ennings" };
+            String[] strings = { "Pam Vargas - Connect", "Gladys Carter - Focus", "Ginger Henry - Realist", "Karla Love - Pacifiers", "Sandy Ray - Change for Change", "Carmen Brown - Real Patriots", " " };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });

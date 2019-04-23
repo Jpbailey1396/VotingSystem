@@ -76,17 +76,15 @@
         <Component class="javax.swing.JList" name="jList1">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="10">
-                <StringItem index="0" value="Martin Lucas"/>
-                <StringItem index="1" value="Anthony Newton"/>
-                <StringItem index="2" value="Sherry Estrada"/>
-                <StringItem index="3" value="Jaime Banks"/>
-                <StringItem index="4" value="Ray Moore"/>
-                <StringItem index="5" value="Rosemary Vaughn"/>
-                <StringItem index="6" value="Sadie Warren"/>
-                <StringItem index="7" value="Melvin Rivera"/>
-                <StringItem index="8" value="Carroll Castillo"/>
-                <StringItem index="9" value=" "/>
+              <StringArray count="8">
+                <StringItem index="0" value="Martin Lucas - Connect"/>
+                <StringItem index="1" value="Anthony Newton - focus"/>
+                <StringItem index="2" value="Sherry Estrada - Realist"/>
+                <StringItem index="3" value="Jaime Banks - Change for Change"/>
+                <StringItem index="4" value="Ray Moore - Pacifiers"/>
+                <StringItem index="5" value="Rosemary Vaughn - Real Patriots"/>
+                <StringItem index="6" value=" "/>
+                <StringItem index="7" value=" "/>
               </StringArray>
             </Property>
           </Properties>

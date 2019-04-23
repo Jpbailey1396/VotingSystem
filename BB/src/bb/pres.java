@@ -64,7 +64,7 @@ public class pres extends javax.swing.JFrame {
 
         jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Josh Wood\t- Connect Party     ", "Kelly Diaz\t- Focua Party", "Shelley Stephens\t- Realist Party", "Felicia Cohen\t- Change for Change Party", "Audrey Allen\t- Pacifiers", "Alexander Curtis\t- Real Patriots ", " " };
+            String[] strings = { "Josh Wood\t- Connect Party     ", "Kelly Diaz\t- Focus Party", "Shelley Stephens\t- Realist Party", "Felicia Cohen\t- Change for Change Party", "Audrey Allen\t- Pacifiers", "Alexander Curtis\t- Real Patriots ", " " };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
