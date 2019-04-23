@@ -75,8 +75,6 @@ public class Disqualify_Vote extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         No.setBackground(new java.awt.Color(0, 0, 102));
         No.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         No.setForeground(new java.awt.Color(242, 172, 16));
@@ -90,7 +88,6 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Are You Sure You Want To Disqulify");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         Yes.setBackground(new java.awt.Color(0, 0, 102));
         Yes.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
@@ -186,7 +183,7 @@ public class Disqualify_Vote extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGap(0, 38, Short.MAX_VALUE))
         );
 
         pack();
