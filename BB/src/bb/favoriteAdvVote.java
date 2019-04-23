@@ -47,7 +47,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Vote for your Favorite Advisor");
 
-        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Cuthbert Binns", "Charity Burbage", "Alecto Carrow", "Amycus Carrow", "Albus Percival Wulfric", "Brian Dumbledore", "Filius Flitwick", "Firenze", "Gilderoy Lockhart", "Neville Longbottom", "Remus Lupin", "Minerva McGonagall", "Alastor Moody", "Quirinus Quirrell", "Aurora Sinistra ", "Horace Slughorn", "Severus Snape", "Pomona Sprout", "Sybill Trelawney", "Dolores Jane Umbridge", "Septima Vector" };
             public int getSize() { return strings.length; }

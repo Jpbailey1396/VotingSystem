@@ -43,7 +43,7 @@ public class king extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(760, 453));
 
-        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Rosario Feit", "Emmitt Madison", "Otto Madruga", "Perry Batz", "Trent Seth", "Zack Dollins", "Stewart Guan", "Boyd Aho", "Bryan Smeltzer", "Vern Hagberg" };
             public int getSize() { return strings.length; }

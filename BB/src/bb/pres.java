@@ -62,7 +62,7 @@ public class pres extends javax.swing.JFrame {
             }
         });
 
-        jList1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jList1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Josh Wood\t- Connect Party     ", "Kelly Diaz\t- Focus Party", "Shelley Stephens\t- Realist Party", "Felicia Cohen\t- Change for Change Party", "Audrey Allen\t- Pacifiers", "Alexander Curtis\t- Real Patriots ", " " };
             public int getSize() { return strings.length; }
@@ -82,7 +82,7 @@ public class pres extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(232, 232, 232)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)

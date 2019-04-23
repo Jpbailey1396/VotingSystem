@@ -35,27 +35,17 @@ public class HSOfunc extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        recountVoteBtn = new javax.swing.JButton();
         createElectionBtn = new javax.swing.JButton();
         certifyElectionBtn = new javax.swing.JButton();
-        disqualifyVoteBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        disqualifyVoteBtn = new javax.swing.JButton();
+        recountVoteBtn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        recountVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
-        recountVoteBtn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        recountVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
-        recountVoteBtn.setText("Recount Votes");
-        recountVoteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recountVoteBtnActionPerformed(evt);
-            }
-        });
 
         createElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
         createElectionBtn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -77,16 +67,6 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
-        disqualifyVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
-        disqualifyVoteBtn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        disqualifyVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
-        disqualifyVoteBtn.setText("Disqualify Vote");
-        disqualifyVoteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                disqualifyVoteBtnActionPerformed(evt);
-            }
-        });
-
         jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(242, 172, 16));
@@ -97,32 +77,50 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
+        disqualifyVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
+        disqualifyVoteBtn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        disqualifyVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
+        disqualifyVoteBtn.setText("Disqualify Vote");
+        disqualifyVoteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disqualifyVoteBtnActionPerformed(evt);
+            }
+        });
+
+        recountVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
+        recountVoteBtn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        recountVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
+        recountVoteBtn.setText("Recount Votes");
+        recountVoteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                recountVoteBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(disqualifyVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(createElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(certifyElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(disqualifyVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(recountVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(certifyElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(recountVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(certifyElectionBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(disqualifyVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(createElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(certifyElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(disqualifyVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(recountVoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
