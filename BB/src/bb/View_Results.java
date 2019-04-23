@@ -52,7 +52,6 @@ public class View_Results extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(780, 500));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(780, 500));
 
@@ -113,7 +112,9 @@ public class View_Results extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel10.setText("58 Votes");
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton5.setBackground(new java.awt.Color(0, 0, 102));
+        jButton5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(242, 172, 16));
         jButton5.setText("Back");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +122,9 @@ public class View_Results extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton6.setBackground(new java.awt.Color(0, 0, 102));
+        jButton6.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(242, 172, 16));
         jButton6.setText("View Demographics");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,12 +192,12 @@ public class View_Results extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(251, Short.MAX_VALUE)
+                        .addContainerGap(291, Short.MAX_VALUE)
                         .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(188, 188, 188)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -203,7 +206,7 @@ public class View_Results extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1);
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
