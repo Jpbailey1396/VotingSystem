@@ -141,7 +141,9 @@ public class king extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    public String getSelected(){
+        return selected;
+    }
     /**
      * @param args the command line arguments
      */

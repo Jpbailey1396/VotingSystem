@@ -119,7 +119,7 @@ public class vice_pres extends javax.swing.JFrame {
         JOptionPane.showConfirmDialog(rootPane, "You have selected " + selected);
         //System.out.print(selected);
         this.setVisible(false);
-        new castVote().setVisible(true);
+        new castVoteVicePresident().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

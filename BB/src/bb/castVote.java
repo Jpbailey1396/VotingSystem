@@ -26,7 +26,7 @@ public class castVote extends javax.swing.JFrame {
     public castVote() {
         initComponents();
         
-        System.out.print("HERE" + advisor.getSelectedAdvisor());
+        //System.out.print("HERE" + advisor.getSelectedAdvisor());
         jLabel2.setText(advisor.getSelectedAdvisor());
         
     }
@@ -155,6 +155,7 @@ public class castVote extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
