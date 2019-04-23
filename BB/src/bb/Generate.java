@@ -64,12 +64,12 @@ public static String path = file.getAbsolutePath();
            
        Random rand = new Random(); 
        //id = 10000 + (int) (Math.random()*99999);
-       id = i+1;
+       id = i+1+800144000;
        //System.out.println("Random Number: "+id);
        //////////////////////////////////////////////////////////
       // id = 80000000 + id;
        Name = Names.get(i);
-       Election_id = 1 + (int) (Math.random()*100);
+       //Election_id = 1 + (int) (Math.random()*100);
        Year = 1 + (int) (Math.random()*4);
        Race = 1 + (int) (Math.random()*4);
        sex = 1 + (int) (Math.random()*2);
