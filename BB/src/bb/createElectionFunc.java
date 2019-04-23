@@ -47,7 +47,25 @@ public class createElectionFunc extends javax.swing.JFrame {
         jProgressBar1 = new javax.swing.JProgressBar();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        majorPanel = new javax.swing.JPanel();
+        namePanel = new javax.swing.JPanel();
+        dateField = new javax.swing.JTextField();
+        nameField = new javax.swing.JTextField();
+        ecField = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        rankPanel = new javax.swing.JPanel();
+        freshCheck = new javax.swing.JCheckBox();
+        sophCheck = new javax.swing.JCheckBox();
+        juniCheck = new javax.swing.JCheckBox();
+        seniCheck = new javax.swing.JCheckBox();
+        gradCheck = new javax.swing.JCheckBox();
+        jLabel11 = new javax.swing.JLabel();
+        genderPanel = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        maleCheck = new javax.swing.JCheckBox();
+        femaCheck = new javax.swing.JCheckBox();
+        otheCheck = new javax.swing.JCheckBox();
         collegePanel = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         List<String> MajorWords = new ArrayList<String>();
@@ -79,129 +97,15 @@ public class createElectionFunc extends javax.swing.JFrame {
         StringSearchable searchCollege = new StringSearchable(collegeWords);
         CollegeCombo = new bb.AutocompleteJComboBox(searchCollege);
         jLabel9 = new javax.swing.JLabel();
-        namePanel = new javax.swing.JPanel();
-        dateField = new javax.swing.JTextField();
-        nameField = new javax.swing.JTextField();
-        ecField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        rankPanel = new javax.swing.JPanel();
-        freshCheck = new javax.swing.JCheckBox();
-        sophCheck = new javax.swing.JCheckBox();
-        juniCheck = new javax.swing.JCheckBox();
-        seniCheck = new javax.swing.JCheckBox();
-        gradCheck = new javax.swing.JCheckBox();
-        jLabel11 = new javax.swing.JLabel();
-        genderPanel = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        maleCheck = new javax.swing.JCheckBox();
-        femaCheck = new javax.swing.JCheckBox();
-        otheCheck = new javax.swing.JCheckBox();
-        backBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         confirmElectionBtn = new javax.swing.JButton();
+        backBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(780, 500));
-        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel1.setText("Create Election");
-
-        javax.swing.GroupLayout majorPanelLayout = new javax.swing.GroupLayout(majorPanel);
-        majorPanel.setLayout(majorPanelLayout);
-        majorPanelLayout.setHorizontalGroup(
-            majorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        majorPanelLayout.setVerticalGroup(
-            majorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 76, Short.MAX_VALUE)
-        );
-
-        jLabel10.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        jLabel10.setText("Major");
-
-        demoList.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        demoList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = {""};
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(demoList);
-
-        removeBtn.setBackground(new java.awt.Color(0, 0, 102));
-        removeBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        removeBtn.setForeground(new java.awt.Color(242, 172, 16));
-        removeBtn.setText("Remove");
-        removeBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                removeBtnActionPerformed(evt);
-            }
-        });
-
-        addDemoBtn.setBackground(new java.awt.Color(0, 0, 102));
-        addDemoBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        addDemoBtn.setForeground(new java.awt.Color(242, 172, 16));
-        addDemoBtn.setText("Add");
-        addDemoBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addDemoBtnActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        jLabel5.setText("Selected Demographics");
-
-        jLabel9.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        jLabel9.setText("College");
-
-        javax.swing.GroupLayout collegePanelLayout = new javax.swing.GroupLayout(collegePanel);
-        collegePanel.setLayout(collegePanelLayout);
-        collegePanelLayout.setHorizontalGroup(
-            collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(collegePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(addDemoBtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(removeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel10)
-                        .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MajorCombo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        collegePanelLayout.setVerticalGroup(
-            collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(collegePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MajorCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(removeBtn)
-                    .addComponent(addDemoBtn))
-                .addContainerGap())
-        );
 
         dateField.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
 
@@ -320,8 +224,100 @@ public class createElectionFunc extends javax.swing.JFrame {
                     .addComponent(genderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(gradCheck)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
+
+        jLabel10.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        jLabel10.setText("Major");
+
+        demoList.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        demoList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = {""};
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(demoList);
+
+        removeBtn.setBackground(new java.awt.Color(0, 0, 102));
+        removeBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        removeBtn.setForeground(new java.awt.Color(242, 172, 16));
+        removeBtn.setText("Remove");
+        removeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeBtnActionPerformed(evt);
+            }
+        });
+
+        addDemoBtn.setBackground(new java.awt.Color(0, 0, 102));
+        addDemoBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        addDemoBtn.setForeground(new java.awt.Color(242, 172, 16));
+        addDemoBtn.setText("Add");
+        addDemoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addDemoBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        jLabel5.setText("Selected Demographics");
+
+        jLabel9.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        jLabel9.setText("College");
+
+        javax.swing.GroupLayout collegePanelLayout = new javax.swing.GroupLayout(collegePanel);
+        collegePanel.setLayout(collegePanelLayout);
+        collegePanelLayout.setHorizontalGroup(
+            collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(collegePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(collegePanelLayout.createSequentialGroup()
+                        .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(MajorCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, collegePanelLayout.createSequentialGroup()
+                                    .addComponent(addDemoBtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(removeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 14, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        collegePanelLayout.setVerticalGroup(
+            collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(collegePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CollegeCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MajorCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(collegePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addDemoBtn)
+                    .addComponent(removeBtn))
+                .addGap(142, 142, 142))
+        );
+
+        confirmElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
+        confirmElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
+        confirmElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
+        confirmElectionBtn.setText("Confirm");
+        confirmElectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmElectionBtnActionPerformed(evt);
+            }
+        });
 
         backBtn.setBackground(new java.awt.Color(0, 0, 102));
         backBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
@@ -333,60 +329,81 @@ public class createElectionFunc extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 514, Short.MAX_VALUE)
+                .addComponent(confirmElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backBtn)
+                    .addComponent(confirmElectionBtn))
+                .addGap(33, 33, 33))
+        );
+
         javax.swing.GroupLayout namePanelLayout = new javax.swing.GroupLayout(namePanel);
         namePanel.setLayout(namePanelLayout);
         namePanelLayout.setHorizontalGroup(
             namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, namePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(namePanelLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(ecField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(namePanelLayout.createSequentialGroup()
-                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(namePanelLayout.createSequentialGroup()
                 .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rankPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 5, Short.MAX_VALUE))
+                    .addGroup(namePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(namePanelLayout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(ecField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(namePanelLayout.createSequentialGroup()
+                                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dateField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(rankPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(138, 138, 138))
+            .addGroup(namePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         namePanelLayout.setVerticalGroup(
             namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(namePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(dateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(ecField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(rankPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(backBtn))
+                .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(namePanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(nameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(dateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6)
+                            .addComponent(ecField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(41, 41, 41)
+                        .addComponent(rankPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
-
-        confirmElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 15)); // NOI18N
-        confirmElectionBtn.setText("confirm");
-        confirmElectionBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmElectionBtnActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -395,62 +412,50 @@ public class createElectionFunc extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                        .addComponent(majorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(confirmElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel7))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(majorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7))
-                            .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
-                        .addComponent(confirmElectionBtn))
-                    .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+    }//GEN-LAST:event_backBtnActionPerformed
+
     private void confirmElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmElectionBtnActionPerformed
         // TODO add your handling code here:
-        
-        
+
         int check1 = 0;
         int check2 = 0;
         int check3 = 0;
-        
+
         String ecOutput = "";
         String dateOutput = "";
         String nameOutput = "";
-        
+
         if(ecField.getText().equals(""))
         {
             //Show error dialog
-            
+
             JOptionPane.showMessageDialog(null,"EC field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
-            
+
             //Erase output
             ecOutput = "";
         }
@@ -459,12 +464,12 @@ public class createElectionFunc extends javax.swing.JFrame {
             check1 = 1;
             ecOutput += ecField.getText();
         }
-        
+
         if(dateField.getText().equals(""))
         {
             //Show error dialog
             JOptionPane.showMessageDialog(null,"Date field missing","NOTICE!",JOptionPane.INFORMATION_MESSAGE);
-            
+
             //Erase output
             dateOutput = "";
         }
@@ -473,7 +478,7 @@ public class createElectionFunc extends javax.swing.JFrame {
             check2 = 1;
             dateOutput += dateField.getText();
         }
-        
+
         if(nameField.getText().equals(""))
         {
             //Show error dialog
@@ -486,106 +491,88 @@ public class createElectionFunc extends javax.swing.JFrame {
             check3 = 1;
             nameOutput += nameField.getText();
         }
-        
-        
-        
+
         if(check1 == 1 && check2 == 1 && check3==1)
         {
             this.setVisible(false);
             new createElectionConfor(nameOutput,ecOutput,dateOutput).setVisible(true);
-            
+
         }
-        
     }//GEN-LAST:event_confirmElectionBtnActionPerformed
-
-    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_backBtnActionPerformed
-
-    private void freshCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshCheckActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_freshCheckActionPerformed
 
     private void addDemoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDemoBtnActionPerformed
         // TODO add your handling code here:
-        
-        
+
         if(sophCheck.isSelected() && !LiztModel.contains("Sophmore"))
         {
-           LiztModel.addElement("Sophmore");
+            LiztModel.addElement("Sophmore");
         }
-        
-        
+
         if(freshCheck.isSelected() && !LiztModel.contains("Freshman"))
         {
             LiztModel.addElement("Freshman");
         }
-        
+
         if(seniCheck.isSelected() && !LiztModel.contains("Senior"))
         {
             LiztModel.addElement("Senior");
         }
-        
+
         if(juniCheck.isSelected() && !LiztModel.contains("Junior"))
         {
             LiztModel.addElement("Junior");
         }
-        
+
         if(gradCheck.isSelected()&& !LiztModel.contains("Gradute"))
         {
             LiztModel.addElement("Graduate");
         }
-        
+
         if(maleCheck.isSelected() && !LiztModel.contains("Male"))
         {
             LiztModel.addElement("Male");
         }
-        
+
         if(femaCheck.isSelected() && !LiztModel.contains("Female"))
         {
             LiztModel.addElement("Female");
         }
-        
+
         if(otheCheck.isSelected() && !LiztModel.contains("Other"))
         {
             LiztModel.addElement("Other");
         }
-        
-        //Stuff from list 
-        
-        
+
+        //Stuff from list
+
         if(!LiztModel.contains(CollegeCombo.getSelectedItem()))
         {
-           LiztModel.addElement(CollegeCombo.getSelectedItem()); 
+            LiztModel.addElement(CollegeCombo.getSelectedItem());
         }
-        
+
         if(!LiztModel.contains(MajorCombo.getSelectedItem()))
         {
-           LiztModel.addElement(MajorCombo.getSelectedItem()); 
+            LiztModel.addElement(MajorCombo.getSelectedItem());
         }
-        
-        
-        //Stuff for remocve
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_addDemoBtnActionPerformed
 
-    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameFieldActionPerformed
+        //Stuff for remocve
+    }//GEN-LAST:event_addDemoBtnActionPerformed
 
     private void removeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeBtnActionPerformed
         // TODO add your handling code here:
         if(!LiztModel.isEmpty())
         {
-          LiztModel.remove(demoList.getSelectedIndex());  
+            LiztModel.remove(demoList.getSelectedIndex());
         }
-        
     }//GEN-LAST:event_removeBtnActionPerformed
+
+    private void freshCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshCheckActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_freshCheckActionPerformed
+
+    private void nameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -647,10 +634,10 @@ public class createElectionFunc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JCheckBox juniCheck;
-    private javax.swing.JPanel majorPanel;
     private javax.swing.JCheckBox maleCheck;
     private javax.swing.JTextField nameField;
     private javax.swing.JPanel namePanel;

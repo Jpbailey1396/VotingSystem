@@ -54,6 +54,7 @@ public class Certify_Election_Conf_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
         jButton2.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Yes");
