@@ -19,6 +19,8 @@ public class castVote extends javax.swing.JFrame {
      * Creates new form castVote
      */
     favoriteAdvVote advisor = new favoriteAdvVote();
+    queen qn = new queen();
+    king kn = new king();
     
     
     public castVote() {
@@ -104,7 +106,7 @@ public class castVote extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         pack();
