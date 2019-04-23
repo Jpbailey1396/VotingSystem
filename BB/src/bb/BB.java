@@ -9,6 +9,11 @@
 
 package bb;
 
+import java.awt.Image;
+import java.io.IOException;
+import javafx.stage.Stage;
+import javax.imageio.ImageIO;
+
 /**
  *
  * @author josia
@@ -19,10 +24,16 @@ public class BB {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public void start(Stage stage) throws Exception
+    {
+  
+    }
+    
+    
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
-        //Setting the selection menu to true on startup -Josiah and Andrew 
+        //Setting the selection menu to true on startup -Josiah and Andrew
         new SelectMenu().setVisible(true);
         
     }
