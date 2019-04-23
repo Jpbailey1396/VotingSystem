@@ -13,13 +13,20 @@ import java.awt.Toolkit;
  * @author josia
  */
 public class createElectionConfor extends javax.swing.JFrame {
-
+    String Global;
     /**
      * Creates new form createElectionConfor
      */
     public createElectionConfor() {
         initComponents();
         
+    }
+    
+    public createElectionConfor(String name, String ec, String date) {
+        initComponents();
+        nameLabel.setText(name);
+        ecLabel.setText(ec);
+        dateLabel.setText(date);
     }
 
     /**
@@ -34,44 +41,93 @@ public class createElectionConfor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         yesElectionBtn = new javax.swing.JButton();
         noElectionBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        dateLabel = new javax.swing.JLabel();
+        ecLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Are your sure you want to create this election?");
 
-        yesElectionBtn.setText("Yes");
+        yesElectionBtn.setText("Back");
 
-        noElectionBtn.setText("No");
+        noElectionBtn.setText("Confirm");
         noElectionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noElectionBtnActionPerformed(evt);
             }
         });
 
+        jLabel2.setText("Name:");
+
+        jLabel3.setText("Date:");
+
+        jLabel4.setText("EC ID:");
+
+        nameLabel.setText("jLabel5");
+
+        dateLabel.setText("jLabel6");
+
+        ecLabel.setText("jLabel7");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ecLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dateLabel)
+                            .addComponent(nameLabel))))
+                .addGap(161, 161, 161))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 44, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(yesElectionBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(noElectionBtn))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                        .addComponent(noElectionBtn)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(nameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dateLabel)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ecLabel)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yesElectionBtn)
                     .addComponent(noElectionBtn))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -80,6 +136,12 @@ public class createElectionConfor extends javax.swing.JFrame {
     private void noElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noElectionBtnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        createElectionFinal cef = new createElectionFinal();
+        cef.setVisible(true);
+        
+        //HSOfunc hsOfunc = new HSOfunc();
+        //hsOfunc.setVisible(true);
+        
     }//GEN-LAST:event_noElectionBtnActionPerformed
 
     /**
@@ -113,12 +175,19 @@ public class createElectionConfor extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new createElectionConfor().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dateLabel;
+    private javax.swing.JLabel ecLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JButton noElectionBtn;
     private javax.swing.JButton yesElectionBtn;
     // End of variables declaration//GEN-END:variables
