@@ -694,7 +694,7 @@ public class CreateBallot extends javax.swing.JFrame {
 
     private void removeRaceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeRaceButtonActionPerformed
         Ballot.remove(RaceList.getSelectedIndex());
-        liztModel.remove(RaceList.getSelectedIndex());
+        liztModel.remove(RaceList.getSelectedIndex()); 
         currentRace=0;
         updateEverything(Ballot);
 

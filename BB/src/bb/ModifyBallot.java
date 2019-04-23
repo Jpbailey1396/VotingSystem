@@ -185,7 +185,7 @@ public class ModifyBallot extends javax.swing.JFrame {
         initFavAdv();
         else if(a.equals("Student Government"))
         initStdGov();
-        else if(a.equals("Blank"))
+        else if(a.equals("Blank")) 
         {
             this.setVisible(false);
             new CreateBallot().setVisible(true);

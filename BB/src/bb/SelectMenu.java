@@ -148,7 +148,7 @@ public class SelectMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SelectMenu().setVisible(true);
+                new SelectMenu().setVisible(true); 
                
             }
         });

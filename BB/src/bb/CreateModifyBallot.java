@@ -88,7 +88,7 @@ public class CreateModifyBallot extends javax.swing.JFrame {
 
     private void CreateModifyBallotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateModifyBallotActionPerformed
         //if Ballot=null;
-        if(Ballot==null)
+        if(Ballot==null) 
             new ModifyBallot().setVisible(true);
         else
             new CreateBallot(Ballot).setVisible(true);
