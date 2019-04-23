@@ -152,6 +152,7 @@ public class SelectMenu extends javax.swing.JFrame {
 
     private void hsoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hsoBtnActionPerformed
         // Created by Andrew and Josiah 
+        this.setVisible(false);
         new HSOfunc().setVisible(true);
     }//GEN-LAST:event_hsoBtnActionPerformed
 

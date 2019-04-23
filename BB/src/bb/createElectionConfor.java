@@ -164,7 +164,6 @@ public class createElectionConfor extends javax.swing.JFrame {
 
     private void yesElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesElectionBtnActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null,"Election has been created.","Election Created",JOptionPane.INFORMATION_MESSAGE);
         this.setVisible(false);
         //createElectionFunc cef = new createElectionFunc();
         //cef.setVisible(true);

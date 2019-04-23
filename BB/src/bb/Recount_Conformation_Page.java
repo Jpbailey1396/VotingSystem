@@ -108,6 +108,7 @@ public class Recount_Conformation_Page extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         String st3 = "Recounting completed as requested!";
             JOptionPane.showMessageDialog(null, st3); 
          new Updated_Results().setVisible(true);
@@ -116,6 +117,7 @@ public class Recount_Conformation_Page extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          this.setVisible(false);
+         new Recount_Votes_Page().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

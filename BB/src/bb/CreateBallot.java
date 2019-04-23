@@ -208,7 +208,7 @@ public class CreateBallot extends javax.swing.JFrame {
         jLabel5.setText("Sex");
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel6.setText("Race");
+        jLabel6.setText("Party");
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jLabel7.setText("Academic Year");
@@ -217,7 +217,12 @@ public class CreateBallot extends javax.swing.JFrame {
         yText.setText("UG");
 
         rText.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        rText.setText("A");
+        rText.setText("I");
+        rText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rTextActionPerformed(evt);
+            }
+        });
 
         sText.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         sText.setText("F");
@@ -817,6 +822,10 @@ public class CreateBallot extends javax.swing.JFrame {
         Ballot.get(currentRace).clear();
         Ballot.get(currentRace).add(temp);
     }//GEN-LAST:event_ClearButtonActionPerformed
+
+    private void rTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rTextActionPerformed
 
     /**
      * @param args the command line arguments

@@ -199,6 +199,7 @@ public class HSOfunc extends javax.swing.JFrame {
 
     private void certifyElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_certifyElectionBtnActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         new Certify_Election_Page().setVisible(true);
     }//GEN-LAST:event_certifyElectionBtnActionPerformed
 
@@ -218,6 +219,9 @@ public class HSOfunc extends javax.swing.JFrame {
 
     private void recountVoteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recountVoteBtnActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        
+                
         new Recount_Votes_Page().setVisible(true);
     }//GEN-LAST:event_recountVoteBtnActionPerformed
 

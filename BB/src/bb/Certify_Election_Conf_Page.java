@@ -109,6 +109,7 @@ public class Certify_Election_Conf_Page extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
         String st3 = "Certifying Election as requested!";
         JOptionPane.showMessageDialog(null, st3);
         new View_Results().setVisible(true);
@@ -117,6 +118,7 @@ public class Certify_Election_Conf_Page extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        new Certify_Election_Page().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

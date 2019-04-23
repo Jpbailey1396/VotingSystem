@@ -125,6 +125,8 @@ public class Recount_Votes_Page extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        
         
         try{
             selected_Recount = jList1.getSelectedValue().toString(); 
@@ -156,6 +158,7 @@ public class Recount_Votes_Page extends javax.swing.JFrame {
              new Recount_Conformation_Page().setVisible(true);
             
         }
+      
      
     }//GEN-LAST:event_jButton2ActionPerformed
     
@@ -165,6 +168,7 @@ public class Recount_Votes_Page extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
+        new HSOfunc().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
