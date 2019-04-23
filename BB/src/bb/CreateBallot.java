@@ -33,7 +33,7 @@ public class CreateBallot extends javax.swing.JFrame {
     private int currentRace;
     public CreateBallot() {
         initComponents();
-        
+        setSize(780,780);
         model=(DefaultTableModel)CanTable.getModel();
         liztModel=new DefaultListModel();
         liztModel.addElement("Race 1");
