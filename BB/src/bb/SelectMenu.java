@@ -49,7 +49,7 @@ public class SelectMenu extends javax.swing.JFrame {
 
         ecBtn.setBackground(new java.awt.Color(0, 0, 102));
         ecBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        ecBtn.setForeground(new java.awt.Color(255, 255, 255));
+        ecBtn.setForeground(new java.awt.Color(242, 172, 16));
         ecBtn.setText("EC");
         ecBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +59,7 @@ public class SelectMenu extends javax.swing.JFrame {
 
         hsoBtn.setBackground(new java.awt.Color(0, 0, 102));
         hsoBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        hsoBtn.setForeground(new java.awt.Color(255, 255, 255));
+        hsoBtn.setForeground(new java.awt.Color(242, 172, 16));
         hsoBtn.setText("HSO");
         hsoBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +69,7 @@ public class SelectMenu extends javax.swing.JFrame {
 
         vBtn.setBackground(new java.awt.Color(0, 0, 102));
         vBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        vBtn.setForeground(new java.awt.Color(255, 255, 255));
+        vBtn.setForeground(new java.awt.Color(242, 172, 16));
         vBtn.setText("Voter");
         vBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,12 +140,12 @@ public class SelectMenu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

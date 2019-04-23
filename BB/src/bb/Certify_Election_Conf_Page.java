@@ -43,6 +43,8 @@ public class Certify_Election_Conf_Page extends javax.swing.JFrame {
 
         jLabel1.setText("Are you sure you want to certify ");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("No");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +52,7 @@ public class Certify_Election_Conf_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Yes");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
