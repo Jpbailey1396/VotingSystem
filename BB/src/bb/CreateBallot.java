@@ -700,9 +700,26 @@ public class CreateBallot extends javax.swing.JFrame {
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         //Save Data here in Array List
         //Ballot(Race1(Name,Vote,Candidates()...),Race2(Name,Vote,Candidates()...),...)
-        JOptionPane.showMessageDialog(null,"You have saved the ballot!\nYou can continue to modify the ballot.","SUCCESS",JOptionPane.PLAIN_MESSAGE);
-        this.setVisible(false);
-        new CreateModifyBallot(Ballot).setVisible(true);
+        boolean g=true;
+        int j=0;
+        while(g && j<Ballot.size())
+        {
+            if(Ballot.get(j).size()-1<Integer.parseInt(Ballot.get(j).get(0).get(1).toString().substring(1)))
+            {
+                g=false;
+            }
+            j++;
+        }
+        if(g)
+        {
+            JOptionPane.showMessageDialog(null,"You have saved the ballot!\nYou can continue to modify the ballot.","SUCCESS",JOptionPane.PLAIN_MESSAGE);
+            this.setVisible(false);
+            new CreateModifyBallot(Ballot).setVisible(true);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"You need more candidates for the specified vote type","WARNING",JOptionPane.WARNING_MESSAGE);   
+        }
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void RaceNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RaceNameTextActionPerformed
