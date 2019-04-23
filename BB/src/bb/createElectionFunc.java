@@ -9,6 +9,7 @@ import java.awt.Component;
 import java.awt.PopupMenu;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 
 /**
@@ -22,45 +23,6 @@ public class createElectionFunc extends javax.swing.JFrame {
      */
     public createElectionFunc() {
         initComponents();
-        
-        List<String> myWords = new ArrayList<String>();
-
-				myWords.add("bike");
-
-				myWords.add("car");
-
-				myWords.add("cap");
-
-				myWords.add("cape");
-
-				myWords.add("canadian");
-
-				myWords.add("caprecious");
-
-				myWords.add("catepult");
-
-
-
-				StringSearchable searchable = new StringSearchable(myWords);
-
-				AutocompleteJComboBox combo = new AutocompleteJComboBox(searchable);
-
-	
-
-				//JFrame frame = new JFrame();
-
-				this.add(combo);
-
-				//this.pack();
-
-				//.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-				this.setVisible(true);
-
-                                
-                                
-                                
-
         
     }
 
@@ -104,7 +66,7 @@ public class createElectionFunc extends javax.swing.JFrame {
         MajorCombo = new bb.AutocompleteJComboBox(searchMajor);
         demoPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        demoList = new javax.swing.JList<>();
         jLabel5 = new javax.swing.JLabel();
         addDemoBtn = new javax.swing.JButton();
         removeBtn = new javax.swing.JButton();
@@ -129,6 +91,7 @@ public class createElectionFunc extends javax.swing.JFrame {
         otheCheck = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(780, 500));
 
         jLabel1.setText("Create Election");
 
@@ -174,16 +137,21 @@ public class createElectionFunc extends javax.swing.JFrame {
 
         jLabel10.setText("Major");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        demoList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = {""};
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(demoList);
 
         jLabel5.setText("Selected Demographics");
 
         addDemoBtn.setText("Add");
+        addDemoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addDemoBtnActionPerformed(evt);
+            }
+        });
 
         removeBtn.setText("Remove");
 
@@ -195,15 +163,14 @@ public class createElectionFunc extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(demoPanelLayout.createSequentialGroup()
+                        .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addGroup(demoPanelLayout.createSequentialGroup()
                         .addComponent(addDemoBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(removeBtn))
-                    .addGroup(demoPanelLayout.createSequentialGroup()
-                        .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(removeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         demoPanelLayout.setVerticalGroup(
             demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,8 +178,8 @@ public class createElectionFunc extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(demoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addDemoBtn)
                     .addComponent(removeBtn))
@@ -363,9 +330,8 @@ public class createElectionFunc extends javax.swing.JFrame {
                         .addGap(7, 7, 7)))
                 .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .addGroup(namePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                        .addComponent(jTextField1)))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(jTextField1))
                 .addGap(64, 64, 64))
         );
         namePanelLayout.setVerticalGroup(
@@ -417,8 +383,7 @@ public class createElectionFunc extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(namePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -428,8 +393,8 @@ public class createElectionFunc extends javax.swing.JFrame {
                                 .addGap(26, 26, 26)
                                 .addComponent(majorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(collegePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(confirmElectionBtn)
                     .addComponent(backBtn))
@@ -452,6 +417,54 @@ public class createElectionFunc extends javax.swing.JFrame {
     private void freshCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_freshCheckActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_freshCheckActionPerformed
+
+    private void addDemoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDemoBtnActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel LiztModel;
+        LiztModel = new DefaultListModel();
+        demoList.setModel(LiztModel);
+        
+        if(sophCheck.isSelected())
+        {
+           LiztModel.addElement("Sophmore");
+        }
+        
+        
+        if(freshCheck.isSelected())
+        {
+            LiztModel.addElement("Freshman");
+        }
+        
+        if(seniCheck.isSelected())
+        {
+            LiztModel.addElement("Senior");
+        }
+        
+        if(juniCheck.isSelected())
+        {
+            LiztModel.addElement("Junior");
+        }
+        
+        if(gradCheck.isSelected())
+        {
+            LiztModel.addElement("Graduate");
+        }
+        
+        if(maleCheck.isSelected())
+        {
+            LiztModel.addElement("Male");
+        }
+        
+        if(femaCheck.isSelected())
+        {
+            LiztModel.addElement("Female");
+        }
+        
+        if(otheCheck.isSelected())
+        {
+            LiztModel.addElement("Other");
+        }
+    }//GEN-LAST:event_addDemoBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -496,6 +509,7 @@ public class createElectionFunc extends javax.swing.JFrame {
     private javax.swing.JButton backBtn;
     private javax.swing.JPanel collegePanel;
     private javax.swing.JButton confirmElectionBtn;
+    private javax.swing.JList<String> demoList;
     private javax.swing.JPanel demoPanel;
     private javax.swing.JCheckBox femaCheck;
     private javax.swing.JCheckBox freshCheck;
@@ -511,7 +525,6 @@ public class createElectionFunc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
