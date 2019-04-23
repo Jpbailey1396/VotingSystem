@@ -60,7 +60,7 @@ public class CreateBallot extends javax.swing.JFrame {
         int cnt=B.size();
         
         for(int i=0;i<cnt;i++)
-        {
+        { 
             liztModel.addElement(B.get(i).get(0).get(0));//populate RaceList //fix
         }
         currentRace=0;

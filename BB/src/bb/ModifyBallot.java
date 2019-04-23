@@ -99,7 +99,7 @@ public class ModifyBallot extends javax.swing.JFrame {
         Ballot.add(Secretary);
         Ballot.add(VPresident);
         Ballot.add(President);
-    }
+    } 
 
     /**
      * This method is called from within the constructor to initialize the form.
