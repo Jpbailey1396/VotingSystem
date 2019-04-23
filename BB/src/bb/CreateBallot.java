@@ -32,9 +32,7 @@ public class CreateBallot extends javax.swing.JFrame {
     private int currentRace;
     public CreateBallot() {
         initComponents();
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
         model=(DefaultTableModel)CanTable.getModel();
         liztModel=new DefaultListModel();
         liztModel.addElement("Race 1");
@@ -45,9 +43,7 @@ public class CreateBallot extends javax.swing.JFrame {
     //REDO WITH NEW CONSTRUCTOR W/ PARAM ARRAYLIST<ARRAYLIST<ARRAYLIST>> B
     public CreateBallot(ArrayList<ArrayList> B) {
         initComponents();
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
         model=(DefaultTableModel)CanTable.getModel();
         liztModel=new DefaultListModel();
         int cnt=B.size();

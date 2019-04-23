@@ -17,16 +17,12 @@ public class CreateModifyBallot extends javax.swing.JFrame {
     private ArrayList Ballot=null;
     public CreateModifyBallot() {
         initComponents();
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
     }
     public CreateModifyBallot(ArrayList B) {
         initComponents();
         Ballot = new ArrayList(B);
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
     }
     
     /**
