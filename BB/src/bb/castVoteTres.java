@@ -41,6 +41,7 @@ public class castVoteTres extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Cast Vote");
 
