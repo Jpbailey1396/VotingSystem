@@ -7,6 +7,7 @@ package bb;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -57,6 +58,11 @@ public class createElectionConfor extends javax.swing.JFrame {
         yesElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         yesElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
         yesElectionBtn.setText("Back");
+        yesElectionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yesElectionBtnActionPerformed(evt);
+            }
+        });
 
         noElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
         noElectionBtn.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
@@ -91,7 +97,7 @@ public class createElectionConfor extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(141, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -107,17 +113,15 @@ public class createElectionConfor extends javax.swing.JFrame {
                             .addComponent(nameLabel))))
                 .addGap(161, 161, 161))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 44, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(yesElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(noElectionBtn)))
+                .addContainerGap()
+                .addComponent(yesElectionBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(noElectionBtn)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,14 +152,23 @@ public class createElectionConfor extends javax.swing.JFrame {
 
     private void noElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noElectionBtnActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Election has been created.","Election Created",JOptionPane.INFORMATION_MESSAGE);
         this.setVisible(false);
-        createElectionFinal cef = new createElectionFinal();
-        cef.setVisible(true);
+       // createElectionFinal cef = new createElectionFinal();
+        //cef.setVisible(true);
         
         //HSOfunc hsOfunc = new HSOfunc();
         //hsOfunc.setVisible(true);
         
     }//GEN-LAST:event_noElectionBtnActionPerformed
+
+    private void yesElectionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesElectionBtnActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Election has been created.","Election Created",JOptionPane.INFORMATION_MESSAGE);
+        this.setVisible(false);
+        //createElectionFunc cef = new createElectionFunc();
+        //cef.setVisible(true);
+    }//GEN-LAST:event_yesElectionBtnActionPerformed
 
     /**
      * @param args the command line arguments
