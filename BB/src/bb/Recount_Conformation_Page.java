@@ -25,9 +25,7 @@ public class Recount_Conformation_Page extends javax.swing.JFrame {
     public Recount_Conformation_Page() {
         initComponents();
         jLabel2.setText(rc.getSelected());
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
     }
 
     /**

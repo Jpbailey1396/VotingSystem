@@ -20,9 +20,7 @@ public class View_Demographics_Demo extends javax.swing.JFrame {
      */
     public View_Demographics_Demo() {
         initComponents();
-        setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
     }
 
     /**

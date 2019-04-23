@@ -19,9 +19,7 @@ public class createElectionFunc extends javax.swing.JFrame {
      */
     public createElectionFunc() {
         initComponents();
-         setSize(1100, 900);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+         
     }
 
     /**
