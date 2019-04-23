@@ -14,10 +14,10 @@ import java.util.ArrayList;
  * @author Chris
  */
 public class CreateModifyBallot extends javax.swing.JFrame {
-    private ArrayList Ballot=null;
+    private ArrayList Ballot;
     public CreateModifyBallot() {
         initComponents();
-        
+        Ballot=null;        
     }
     public CreateModifyBallot(ArrayList B) {
         initComponents();
@@ -97,7 +97,10 @@ public class CreateModifyBallot extends javax.swing.JFrame {
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         this.setVisible(false);     // TODO add your handling code here:
-        new SelectMenu().setVisible(true);
+        if(Ballot!=null)
+            new SelectMenu(Ballot).setVisible(true);
+        else
+            new SelectMenu().setVisible(true);
     }//GEN-LAST:event_ExitButtonActionPerformed
 
     /**

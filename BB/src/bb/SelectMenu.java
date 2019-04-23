@@ -7,6 +7,7 @@ package bb;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,14 +18,14 @@ public class SelectMenu extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
+    private ArrayList Ballot=null;
     public SelectMenu() {
         initComponents();
-        //making it appear in centre - Joseph 
-        
-        
-
     }
-
+    public SelectMenu(ArrayList<ArrayList<ArrayList>> B){
+        initComponents();
+        Ballot=new ArrayList(B);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -95,7 +96,11 @@ public class SelectMenu extends javax.swing.JFrame {
 
     private void ecBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ecBtnActionPerformed
         // TODO add your handling code here:
-        new CreateModifyBallot().setVisible(true);
+        if(Ballot==null)
+            new CreateModifyBallot().setVisible(true);
+        else
+            new CreateModifyBallot().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_ecBtnActionPerformed
 
     private void vBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vBtnActionPerformed
