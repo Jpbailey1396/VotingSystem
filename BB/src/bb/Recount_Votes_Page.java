@@ -47,6 +47,8 @@ public class Recount_Votes_Page extends javax.swing.JFrame {
 
         jLabel2.setText("Choose Election for Recount");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +56,8 @@ public class Recount_Votes_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setForeground(new java.awt.Color(242, 172, 16));
         jButton2.setText("Recount");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

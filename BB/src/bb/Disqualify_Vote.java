@@ -77,7 +77,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        No.setBackground(new java.awt.Color(0, 0, 102));
         No.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        No.setForeground(new java.awt.Color(242, 172, 16));
         No.setText("No");
         No.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +92,9 @@ public class Disqualify_Vote extends javax.swing.JFrame {
         jLabel1.setText("Are You Sure You Want To Disqulify");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        Yes.setBackground(new java.awt.Color(0, 0, 102));
         Yes.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        Yes.setForeground(new java.awt.Color(242, 172, 16));
         Yes.setText("Yes");
         Yes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

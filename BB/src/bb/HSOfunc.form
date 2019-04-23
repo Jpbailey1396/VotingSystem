@@ -88,6 +88,12 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="recountVoteBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Recount Votes"/>
           </Properties>
           <Events>
@@ -96,6 +102,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="createElectionBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Create Election"/>
           </Properties>
           <Events>
@@ -104,6 +116,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="certifyElectionBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Certify Election"/>
           </Properties>
           <Events>
@@ -112,6 +130,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="disqualifyVoteBtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Disqualify Votes"/>
           </Properties>
           <Events>
@@ -120,6 +144,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="10" green="ac" red="f2" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
           </Properties>
           <Events>

@@ -46,6 +46,8 @@ public class Certify_Election_Page extends javax.swing.JFrame {
 
         jLabel1.setText("Do you want to certify this Election?");
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Ceritfy");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,6 +55,8 @@ public class Certify_Election_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 102));
+        jButton3.setForeground(new java.awt.Color(242, 172, 16));
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +64,8 @@ public class Certify_Election_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(0, 0, 102));
+        jButton4.setForeground(new java.awt.Color(242, 172, 16));
         jButton4.setText("Finish");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +73,8 @@ public class Certify_Election_Page extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(0, 0, 102));
+        jButton5.setForeground(new java.awt.Color(242, 172, 16));
         jButton5.setText("View Results");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

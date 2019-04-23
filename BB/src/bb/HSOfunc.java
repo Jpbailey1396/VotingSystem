@@ -45,6 +45,8 @@ public class HSOfunc extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        recountVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
+        recountVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
         recountVoteBtn.setText("Recount Votes");
         recountVoteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +54,8 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
+        createElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
+        createElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
         createElectionBtn.setText("Create Election");
         createElectionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +63,8 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
+        certifyElectionBtn.setBackground(new java.awt.Color(0, 0, 102));
+        certifyElectionBtn.setForeground(new java.awt.Color(242, 172, 16));
         certifyElectionBtn.setText("Certify Election");
         certifyElectionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +72,8 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
+        disqualifyVoteBtn.setBackground(new java.awt.Color(0, 0, 102));
+        disqualifyVoteBtn.setForeground(new java.awt.Color(242, 172, 16));
         disqualifyVoteBtn.setText("Disqualify Votes");
         disqualifyVoteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +81,8 @@ public class HSOfunc extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 102));
+        jButton1.setForeground(new java.awt.Color(242, 172, 16));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
