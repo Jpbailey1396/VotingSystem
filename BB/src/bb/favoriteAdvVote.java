@@ -43,6 +43,7 @@ public class favoriteAdvVote extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(780, 500));
 
         jLabel1.setText("Vote for your Favorite Advisor");
 
