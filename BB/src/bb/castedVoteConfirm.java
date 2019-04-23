@@ -40,6 +40,7 @@ public class castedVoteConfirm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(760, 453));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb/chechMark.png"))); // NOI18N
 

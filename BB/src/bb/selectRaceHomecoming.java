@@ -38,7 +38,7 @@ public class selectRaceHomecoming extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(780, 500));
+        setPreferredSize(new java.awt.Dimension(760, 453));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 102));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
